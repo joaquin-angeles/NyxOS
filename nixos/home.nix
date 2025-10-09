@@ -148,6 +148,9 @@
       "nix-shell" = "nix-shell --run $SHELL";
     };
     initContent = ''
+precmd() {
+  print -Pn "\e]0;%n@%m:%~\a"
+}
 source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
     if command -v fastfetch >/dev/null 2>&1; then
       fastfetch
