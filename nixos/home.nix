@@ -21,29 +21,6 @@
   home.file.".icons".source = ../icons;
   home.file.".themes".source = ../themes;
   home.file.".zprofile".source = ../zsh/.zprofile;
-  home.file.".zshenv".text = ''
-  # Core theming
-  export GTK_THEME=Adwaita-Mono
-  export GTK_ICON_THEME="Papirus-Dark"
-  export XDG_ICON_THEME="Papirus-Dark"
-  export QT_QPA_PLATFORMTHEME=qt6ct
-  export XCURSOR_THEME=Bibata-Modern-Classic
-  export XCURSOR_SIZE=24
-
-  # Editor and terminal
-  export EDITOR="nvim"
-  export VISUAL="nvim"
-  export TERM=xterm-256color
-  export TERMINAL="foot"
-
-  # Language locales
-  export LANG=en_US.UTF-8
-  export LC_ALL=en_US.UTF-8
-
-  # Path variables
-  export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
-  export NIXPKGS_ALLOW_UNFREE=1
-  '';
 
   # FZF
   programs.fzf = {
@@ -92,7 +69,20 @@
 
   # Variables
   home.sessionVariables = {
+    EDITOR = "nvim";
     GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules";
+    GTK_THEME = "Adwaita-Mono";
+    GTK_ICON_THEME = "Papirus-Dark";
+    LANG = "en_US.UTF-8";
+    LC_ALL = "en_US.UTF-8";
+    NIXPKGS_ALLOW_UNFREE = "1";
+    PATH = "$HOME/.local/bin:$HOME/.cargo/bin:${pkgs.stdenv.cc}/bin:$PATH";
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+    TERM = "xterm-256color";
+    VISUAL = "nvim";
+    XCURSOR_THEME = "Bibata-Modern-Classic";
+    XCURSOR_SIZE = "24";
+    XDG_ICON_THEME = "Papirus-Dark";
   };
 
   # Zoxide
