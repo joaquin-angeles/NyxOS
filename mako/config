@@ -1,0 +1,10 @@
+layer=overlay
+margin=6,6,6,12
+width=350
+height=120
+default-timeout=3000
+background-color=#1c1c1c
+border-color=#404040
+border-radius=7
+text-alignment=center
+font=Inter, monospace 13
