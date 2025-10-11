@@ -109,15 +109,6 @@
       bat = "bat --color=always --theme=base16 --style=plain";
       c = "clear";
       flatpak = "flatpak --user";
-      fzf = ''
-      fzf --preview "
-        if [ -d {} ]; then
-          eza -l --color=always {} || ls -la {}
-        else
-          bat --color=always --theme=base16 --style=plain {}
-        fi
-      "
-      '';
       grep = "rg";
       k = "kill";
       lsa = "eza -a";
@@ -133,25 +124,47 @@
       "nix-shell" = "nix-shell --run $SHELL";
     };
     initContent = ''
-precmd() {
-  print -Pn "\e]0;%n@%m:%~\a"
-}
-source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-    if command -v fastfetch >/dev/null 2>&1; then
-      fastfetch
-      echo ""
-    fi
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    cd() {
-      z "$@" && eza
-    }
-stty intr "^G"
-bindkey "^c" kill-whole-line
-bindkey "^a" beginning-of-line
-bindkey "^e" end-of-line
-bindkey "^j" history-search-forward
-bindkey "^k" history-search-backward
-bindkey "^r" fzf-history-widget
+      # Fastfetch
+      if command -v fastfetch >/dev/null 2>&1; then
+        fastfetch
+        echo ""
+      fi
+
+      # Set window titles
+      precmd() {
+        print -Pn "\e]0;%n@%m:%~\a"
+      }
+
+      # Prompt
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+
+      # P10K configuration
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+      # Better CD
+      cd() {
+        z "$@" && eza
+      }
+
+      # Better FZF
+      fzf() {
+        command fzf --preview '
+          if [ -d {} ]; then
+            eza -l --color=always {} || ls -la {}
+          else
+            bat --color=always --theme=base16 --style=plain {}
+          fi
+        ' "$@"
+      }
+
+      # Keybindings
+      stty intr "^G"
+      bindkey "^c" kill-whole-line
+      bindkey "^a" beginning-of-line
+      bindkey "^e" end-of-line
+      bindkey "^j" history-search-forward
+      bindkey "^k" history-search-backward
+      bindkey "^r" fzf-history-widget
     '';
   };
 }

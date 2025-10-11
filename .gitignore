@@ -1,5 +1,15 @@
+# Ignore flake
 nixos/flake.lock
+
+# Icon configuration
+themes/.icons/*
+!themes/.icons/Papirus*
+
+# Theme configuration
+themes/.themes/*
+!themes/.themes/Adwaita-Mono
+
+# SystemD
 systemd/user/*
 !systemd/user/
-!systemd/user/battery-alert.service
-!systemd/user/battery-alert.timer
+!systemd/user/battery-alert.*
