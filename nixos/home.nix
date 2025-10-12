@@ -27,39 +27,9 @@
     enableZshIntegration = true;
   };
 
-
   # Packages
-  home.packages = with pkgs; [
-    bat
-    bibata-cursors
-    btop
-    celluloid
-    chafa
-    cliphist
-    eza
-    fastfetchMinimal
-    foot
-    fzf
-    grim
-    hyprlock
-    hyprpicker
-    hyprshot
-    imv
-    lazygit
-    lf
-    mako
-    neovim
-    ripgrep
-    stow
-    unrar
-    unstable.impala
-    unstable.swayosd
-    unstable.wiremix
-    tmux
-    waybar
-    wbg
-    wl-clipboard
-    zsh-powerlevel10k
+  imports = [
+    ./modules/home-packages.nix
   ];
 
   # Rofi
