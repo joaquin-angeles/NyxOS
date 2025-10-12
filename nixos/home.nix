@@ -51,6 +51,7 @@
     neovim
     ripgrep
     stow
+    unrar
     unstable.impala
     unstable.swayosd
     unstable.wiremix
