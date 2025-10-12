@@ -20,24 +20,10 @@
   home.file.".config/waybar".source = ../waybar;
   home.file.".zprofile".source = ../zsh/.zprofile;
 
-
-  # FZF
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   # Packages
   imports = [
     ./modules/home-packages.nix
   ];
-
-  # Rofi
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-    plugins = [pkgs.rofi-emoji];
-  };
 
   # Variables
   home.sessionVariables = {
@@ -55,12 +41,6 @@
     XCURSOR_THEME = "Bibata-Modern-Classic";
     XCURSOR_SIZE = "24";
     XDG_ICON_THEME = "Papirus-Dark";
-  };
-
-  # Zoxide
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
   };
 
   # Z Shell
