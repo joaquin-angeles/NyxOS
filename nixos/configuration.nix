@@ -41,10 +41,7 @@
   # Networking options
   networking = {
     hostName = "home";
-    networkmanager = {
-      enable = true;
-      wifi.backend = "iwd";
-    };
+    wireless.iwd.enable = true;
 
     # Firewall
     nftables.checkRuleset = true;

@@ -10,23 +10,17 @@
   ];
 
   # Power-savers
+  # Disable PPD
   services.power-profiles-daemon.enable = false;
+  # TLP
   services.tlp.enable = true;
   services.tlp.settings = {
     CPU_SCALING_GOVERNOR_ON_AC = "";
     CPU_SCALING_GOVERNOR_ON_BAT = "";
     CPU_SCALING_DRIVER = "";
   };
+  # Auto CPU frequency
   services.auto-cpufreq.enable = true;
-  services.auto-cpufreq.settings = {
-    battery = {
-      governor = "powersave";
-      turbo = "never";
-    };
-    charger = {
-      governor = "performance";
-      turbo = "auto";
-    };
-  };
+  # Upower
   services.upower.enable = true;
 }
