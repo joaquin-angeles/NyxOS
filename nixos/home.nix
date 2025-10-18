@@ -64,6 +64,7 @@
       grep = "rg";
       k = "kill";
       lsa = "eza -a";
+      lf = "lfcd";
       ll = "eza -l";
       lla = "eza -la";
       ls = "eza";
@@ -94,6 +95,19 @@
       # Better CD
       cd() {
         z "$@" && eza
+      }
+
+      # Better LF
+      lfcd () {
+        tmp="$(mktemp)"
+        $HOME/.config/lf/lfrun -last-dir-path="$tmp" "$@"
+        if [ -f "$tmp" ]; then
+          dir="$(cat "$tmp")"
+          rm -f "$tmp"
+          if [ -d "$dir" ]; then
+            cd "$dir"
+          fi
+        fi
       }
 
       # Better FZF
