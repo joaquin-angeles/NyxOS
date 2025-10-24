@@ -9,7 +9,6 @@
   # Configurations
   home.file.".config/foot".source = ../foot;
   home.file.".config/hypr".source = ../hyprland;
-  home.file.".config/lf".source = ../lf;
   home.file.".config/mako".source = ../mako;
   home.file.".config/nvim".source = ../neovim;
   home.file.".p10k.zsh".source = ../zsh/.p10k.zsh;
@@ -18,6 +17,7 @@
   home.file.".config/swayosd".source = ../swayosd;
   home.file.".config/tmux".source = ../tmux;
   home.file.".config/waybar".source = ../waybar;
+  home.file.".config/yazi".source = ../yazi;
   home.file.".zprofile".source = ../zsh/.zprofile;
 
   # Packages
@@ -133,7 +133,7 @@
           dir="$(cat "$tmp")"
           rm -f "$tmp"
           if [ -n "$dir" ] && [ -d "$dir" ]; then
-            cd "$dir" || return 1
+            cd "$dir" && ls || return 1
           fi
         fi
       }

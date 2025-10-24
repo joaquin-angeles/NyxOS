@@ -19,7 +19,6 @@
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
     lazygit
-    lf
     libnotify
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
@@ -34,6 +33,7 @@
     tmux
     waybar
     wbg
+    yazi
     zsh-powerlevel10k
   ];
 
