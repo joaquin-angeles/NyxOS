@@ -17,7 +17,6 @@
   home.file.".config/swayosd".source = ../swayosd;
   home.file.".config/tmux".source = ../tmux;
   home.file.".config/waybar".source = ../waybar;
-  home.file.".config/yazi".source = ../yazi;
   home.file.".zprofile".source = ../zsh/.zprofile;
 
   # Packages
