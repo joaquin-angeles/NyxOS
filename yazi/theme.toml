@@ -1,5 +1,5 @@
-[mgr]
-border_symbol = " "
+# [mgr]
+# border_symbol = " "
 
 [filetype]
 rules = [
