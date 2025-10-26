@@ -61,7 +61,6 @@
     shellAliases = {
       bat = "bat --color=always --theme=base16 --style=plain";
       c = "clear";
-      flatpak = "flatpak --user";
       grep = "rg";
       k = "kill";
       lsa = "eza -a";
