@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Fetch with nitch
     if command -v nitch >/dev/null 2>&1; then
       nitch
