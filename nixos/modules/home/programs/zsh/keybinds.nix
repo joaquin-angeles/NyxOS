@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Keybindings
     stty intr "^G"
     bindkey "^c" kill-whole-line
