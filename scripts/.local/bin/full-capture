@@ -3,9 +3,9 @@
 # Required commands
 required_cmds=(grim wl-copy notify-send)
 for cmd in "${required_cmds[@]}"; do
-    command -v "$cmd" >/dev/null 2>&1 || {
-        notify-send "Screenshot Tool Error" "Missing: $cmd" -u critical
-        exit 1
+  command -v "$cmd" >/dev/null 2>&1 || {
+    notify-send "Screenshot Tool Error" "Missing: $cmd" -u critical
+      exit 1
     }
 done
 

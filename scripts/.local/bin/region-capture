@@ -5,14 +5,14 @@ required_cmds=(grim slurp wl-copy wayfreeze notify-send)
 
 missing=()
 for cmd in "${required_cmds[@]}"; do
-    command -v "$cmd" >/dev/null 2>&1 || missing+=("$cmd")
+  command -v "$cmd" >/dev/null 2>&1 || missing+=("$cmd")
 done
 
 if [ "${#missing[@]}" -ne 0 ]; then
-    notify-send "screenshot tool error" \
-        "missing dependencies:\n$(printf '%s\n' "${missing[@]}")" \
-        -u critical
-    exit 1
+  notify-send "screenshot tool error" \
+    "missing dependencies:\n$(printf '%s\n' "${missing[@]}")" \
+    -u critical
+  exit 1
 fi
 
 # timestamp and paths
@@ -24,14 +24,14 @@ history_log="$HOME/.cache/screenshot_history.log"
 
 # freeze screen and select region
 wayfreeze --hide-cursor --after-freeze-cmd "
-    region=\$(slurp)
-    if [ -z \"\$region\" ]; then
-        killall wayfreeze
-        exit 1
-    fi
-    grim -g \"\$region\" \"$filepath\"
-    wl-copy < \"$filepath\"
-    notify-send \"screenshot taken\" \"$filepath\" -i \"$filepath\"
-    echo \"$filepath\" >> \"$history_log\"
-    pkill -x wayfreeze
+region=\$(slurp)
+if [ -z \"\$region\" ]; then
+  killall wayfreeze
+  exit 1
+fi
+grim -g \"\$region\" \"$filepath\"
+wl-copy < \"$filepath\"
+notify-send \"screenshot taken\" \"$filepath\" -i \"$filepath\"
+echo \"$filepath\" >> \"$history_log\"
+pkill -x wayfreeze
 " & 

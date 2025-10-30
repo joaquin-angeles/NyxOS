@@ -23,6 +23,7 @@
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
     mako
+    mpv
     neovim
     nwg-look
     ripgrep
