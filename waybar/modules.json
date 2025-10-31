@@ -114,18 +114,21 @@
     "format": "…",
     "tooltip": false
   },
+   
   "custom/power": {
     "format": "",
     "tooltip": true,
     "tooltip-format": "Power menu",
-    "on-click": "~/.bin/power-menu"
+    "on-click": "power-menu"
   },
+   
   "custom/menu": {
     "format": "󰣇",
     "tooltip": true,
     "tooltip-format": "drun",
-    "on-click": "tofi-drun"
+    "on-click": "rofi -show drun"
   },
+   
   "backlight": {
     "format": "{icon}",
     "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
