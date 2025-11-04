@@ -7,7 +7,7 @@ local M = {}
 
 -- Theming
 M.base46 = {
-  theme = "themes/default-mono",
+  theme = "default-mono",
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
