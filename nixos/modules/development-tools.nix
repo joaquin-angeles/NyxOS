@@ -5,14 +5,14 @@
     autoconf
     automake
     bison
-    curl
-    flex
-    gcc
     git
+    gettext
     gnumake
+    groff
     libtool
+    m4
+    patch
     pkgconf
-    python3Full
-    wget
+    texinfo
   ];
 }
