@@ -13,6 +13,7 @@
     nv = "nvim";
     "nv-run" = "__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia";
     pk = "pkill";
+    v = "nvim";
     vim = "nvim";
     "nix-shell" = "nix-shell --run $SHELL";
     yazi = "yzcd";
