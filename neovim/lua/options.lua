@@ -12,5 +12,20 @@ vim.cmd [[
   hi BufferLineBufferSelected guibg=NONE ctermbg=NONE
 ]]
 
--- Relative line numbers
-vim.o.relativenumber = true
+-- Line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- Absolute line numbers in Insert
+vim.api.nvim_create_autocmd("InsertEnter", {
+  callback = function()
+    vim.opt.relativenumber = false
+  end,
+})
+
+-- Relative lines on Normal mode
+vim.api.nvim_create_autocmd("InsertLeave", {
+  callback = function()
+    vim.opt.relativenumber = true
+  end,
+})

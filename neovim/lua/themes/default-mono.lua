@@ -34,14 +34,14 @@ M.base_30 = {
 }
 
 M.base_16 = {
-  base00 = "#181818",
-  base01 = "#282828",
-  base02 = "#383838",
-  base03 = "#585858",
-  base04 = "#b8b8b8",
-  base05 = "#d8d8d8",
-  base06 = "#e8e8e8",
-  base07 = "#f8f8f8",
+  base00 = "#101010",
+  base01 = "#1f1f1f",
+  base02 = "#2e2e2e",
+  base03 = "#383838",
+  base04 = "#424242",
+  base05 = "#bfc5d0",
+  base06 = "#c7cdd8",
+  base07 = "#ced4df",
   base08 = "#eee8d5",
   base09 = "#B8B7B1",
   base0A = "#859ba2",

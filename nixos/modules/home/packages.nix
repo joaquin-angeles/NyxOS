@@ -22,6 +22,7 @@
     mako
     mpv
     neovim
+    nitch
     nwg-look
     ripgrep
     stow

@@ -21,6 +21,6 @@
     ];
   };
 
-  programs.xfconf.enable = true; # Xfconf
-  programs.zsh.enable = true; # Zsh
+  programs.xfconf.enable = true; # xfconf
+  programs.zsh.enable = true; # zsh
 }
