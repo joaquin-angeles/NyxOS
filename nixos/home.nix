@@ -9,7 +9,7 @@
   # Modules
   imports = [
     # Configurations
-    ./modules/home/dotfiles.nix
+    ./dotfiles.nix
     ./modules/home/environment.nix
 
     # Packages
