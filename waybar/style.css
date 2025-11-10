@@ -24,6 +24,18 @@ window#waybar {
   background: transparent;
 }
 
+#custom-menu {
+  font-size: 14.5pt;
+  padding-left: 6pt;
+  padding-right: 2pt;
+}
+
+#custom-power {
+  font-size: 11.5pt;
+  padding-left: 6pt;
+  padding-right: 12pt;
+}
+
 #custom-expand-icon {
   font-size: 12pt;
   padding-right: 8pt;

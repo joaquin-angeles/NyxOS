@@ -87,9 +87,9 @@
   },
 
   "clock": {
-    "format": "{:%I:%M:%S %p}",
+    "format": "{:%A %H:%M}",
     "tooltip": true,
-    "tooltip-format": "{:%b %d, %Y on a %A}",
+    "tooltip-format": "{:%b %d, %Y}",
     "interval": 1,
   },
 
@@ -123,7 +123,7 @@
   },
    
   "custom/menu": {
-    "format": "󰣇",
+    "format": "󰍜",
     "tooltip": true,
     "tooltip-format": "drun",
     "on-click": "rofi -show drun"
