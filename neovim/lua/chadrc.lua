@@ -15,10 +15,10 @@ M.base46 = {
 }
 
 -- Buffer line
-M.ui = {
-  tabufline = {
-    lazyload = false,
-  },
-}
+-- M.ui = {
+--   tabufline = {
+--     lazyload = false,
+--   },
+-- }
 
 return M

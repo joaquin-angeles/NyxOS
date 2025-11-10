@@ -87,7 +87,7 @@
   },
 
   "clock": {
-    "format": "{:%A %H:%M}",
+    "format": "{:%a %H:%M}",
     "tooltip": true,
     "tooltip-format": "{:%b %d, %Y}",
     "interval": 1,
@@ -116,7 +116,7 @@
   },
    
   "custom/power": {
-    "format": "",
+    "format": "󰍃",
     "tooltip": true,
     "tooltip-format": "Power menu",
     "on-click": "power-menu"

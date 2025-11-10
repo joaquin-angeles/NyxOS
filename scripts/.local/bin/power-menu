@@ -6,7 +6,7 @@ options=(
   " Reboot"
   " Lock"
   " Suspend"
-  " Logout"
+  "󰍃 Logout"
 )
 
 # Show Rofi with two columns, no input bar, and large font
@@ -35,7 +35,7 @@ case "$choice" in
   " Suspend")
     systemctl suspend
     ;;
-  " Logout")
+  "󰍃 Logout")
     pkill -KILL -u "$USER"
     ;;
 esac

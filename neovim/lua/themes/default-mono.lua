@@ -1,36 +1,40 @@
+-- Thanks to original theme for existing https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_plus.json
+-- this is a modified version of it
+
 local M = {}
 
 M.base_30 = {
-  white = "#f8f8f8",
-  darker_black = "#101010",
-  black = "#181818", --  nvim bg
-  black2 = "#262626",
-  one_bg = "#2d2d2d",
-  one_bg2 = "#343434",
-  one_bg3 = "#3b3b3b",
-  grey = "#494949",
-  grey_fg = "#575757",
-  grey_fg2 = "#5e5e5e",
-  light_grey = "#656565",
-  red = "#ec8989",
-  baby_pink = "#eca8a8",
-  pink = "#da838b",
+  white = "#dee1e6",
+  darker_black = "#1a1a1a",
+  black = "#1E1E1E", --  nvim bg
+  black2 = "#252525",
+  one_bg = "#282828",
+  one_bg2 = "#313131",
+  one_bg3 = "#3a3a3a",
+  grey = "#444444",
+  grey_fg = "#4e4e4e",
+  grey_fg2 = "#585858",
+  light_grey = "#626262",
+  red = "#D16969",
+  baby_pink = "#ea696f",
+  pink = "#bb7cb6",
   line = "#2e2e2e", -- for lines like vertsplit
-  green = "#c9d36a",
-  vibrant_green = "#eff6ab",
-  blue = "#8abae1",
-  nord_blue = "#a5c6e1",
-  yellow = "#ffe6b5",
-  sun = "#eff6ab",
-  purple = "#e1bee9",
-  dark_purple = "#db9fe9",
-  teal = "#6484a4",
-  orange = "#efb6a0",
-  cyan = "#9aafe6",
-  statusline_bg = "#212121",
-  lightbg = "#2f2f2f",
-  pmenu_bg = "#d59593",
-  folder_bg = "#7cafc2",
+  green = "#B5CEA8",
+  green1 = "#4EC994",
+  vibrant_green = "#bfd8b2",
+  blue = "#569CD6",
+  nord_blue = "#60a6e0",
+  yellow = "#D7BA7D",
+  sun = "#e1c487",
+  purple = "#c68aee",
+  dark_purple = "#b77bdf",
+  teal = "#4294D6",
+  orange = "#d3967d",
+  cyan = "#9CDCFE",
+  statusline_bg = "#242424",
+  lightbg = "#303030",
+  pmenu_bg = "#60a6e0",
+  folder_bg = "#7A8A92",
 }
 
 M.base_16 = {
@@ -52,8 +56,19 @@ M.base_16 = {
   base0F = "#ced4df",
 }
 
+M.polish_hl = {
+  treesitter = {
+    ["@variable.parameter"] = { fg = M.base_30.blue },
+    ["@keyword"] = { fg = M.base_30.blue },
+    ["@variable"] = { fg = M.base_30.cyan },
+    ["@variable.member.key"] = { fg = M.base_30.green1 },
+    ["@keyword.return"] = { fg = M.base_16.base0E },
+    ["@keyword.function"] = { fg = M.base_30.teal },
+  },
+}
+
 M.type = "dark"
 
-M = require("base46").override_theme(M, "default-dark")
+M = require("base46").override_theme(M, "vscode_dark")
 
 return M

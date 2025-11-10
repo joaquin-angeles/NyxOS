@@ -1,6 +1,6 @@
 * {
     font: "Monospace 13.125";
-    text-color:      #dfdfdf;
+    text-color:      #afafaf;
     foreground:      #865054;
 }
 
@@ -26,7 +26,7 @@ window {
     border-radius:  7px;
     background-color: #1c1c1c;
     border:         2px solid;
-    border-color:   #404040;
+    border-color:   #353535;
     padding:        6px;
 }
 
@@ -45,18 +45,18 @@ inputbar {
     padding:  12px 10px;
     border-radius: 18px;
     border: 2px solid;
-    border-color: #404040;
+    border-color: #353535;
     background-color: #252525;
 }
 
 prompt {
-    text-color: #dfdfdf;
+    text-color: #afafaf;
 }
 
 entry {
     placeholder: "Type to search…";
     placeholder-color: #595959;
-    text-color: #dfdfdf;
+    text-color: #afafaf;
 }
 
 /* List view */
@@ -81,18 +81,18 @@ element {
 
 element normal.normal {
     background-color: transparent;
-    text-color:       #404040;
+    text-color:       #353535;
 }
 
 element alternate.normal {
     background-color: transparent;
-    text-color:       #404040;
+    text-color:       #353535;
 }
 
 element selected.normal,
 element selected.active {
     background-color: transparent;
-    text-color:       #dfdfdf;
+    text-color:       #afafaf;
 }
 
 /* Message area */

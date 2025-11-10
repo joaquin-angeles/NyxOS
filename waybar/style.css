@@ -1,19 +1,22 @@
 @import url("./colors.css");
 
 window#waybar {
-  font: 13.125pt "JetBrainsMono Nerd Font";
+  font: 13.5pt "JetBrainsMono Nerd Font";
   background-color: @bg;
   border-bottom: 1px solid lighter(@bright-bg);
   color: #afafaf;
 }
 
+/* Window title or active window module */
 #window {
   color: #595959;
-  padding-left: 5pt
+  padding-left: 8pt;
+  padding-right: 8pt;
 }
 
+/* Workspaces buttons */
 #workspaces button {
-  min-width: 10px;
+  min-width: 12px;
   padding: 0 6px;
   color: #afafaf;
 }
@@ -26,45 +29,53 @@ window#waybar {
   background: transparent;
 }
 
+/* Custom menu section */
 #custom-menu {
-  padding-left: 6pt;
-  padding-right: 4pt;
+  padding-left: 5pt;
+  padding-right: 8pt;
+  font-size: 15pt;
   color: @cyan;
 }
 
+/* Power icon/module */
 #custom-power {
-  font-size: 12pt;
-  padding-left: 6pt;
-  padding-right: 12pt;
+  padding-left: 10pt;
+  padding-right: 6.5pt;
   color: @red;
 }
 
+/* Expand/collapse icon */
 #custom-expand-icon {
   font-size: 12pt;
-  padding-right: 8pt;
+  padding-right: 10pt;
 }
 
+/* System tray */
 #tray {
-  padding-left: 4pt;
-  padding-right: 4pt;
+  padding-left: 6pt;
+  padding-right: 6pt;
   background-color: lighter(@bright-bg);
 }
 
+/* Network module */
 #network {
-  padding-right: 12.5pt;
-}
-
-#bluetooth {
-  padding-right: 8pt;
-  font-size: 13.5pt;
-}
-
-#pulseaudio {
-  font-size: 11.25pt;
   padding-right: 15pt;
 }
 
+/* Bluetooth module */
+#bluetooth {
+  padding-right: 10pt;
+  font-size: 13.5pt;
+}
+
+/* PulseAudio module */
+#pulseaudio {
+  font-size: 11.25pt;
+  padding-right: 17pt;
+}
+
+/* Clock module */
 #clock {
-  padding-left: 10pt;
-  padding-right: 8pt;
+  padding-left: 12pt;
+  padding-right: 10pt;
 }
