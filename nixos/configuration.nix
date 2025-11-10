@@ -3,11 +3,11 @@
 {
   # Modules
   imports = [
-    ./modules/development-tools.nix
+    ./modules/apps/development-tools.nix
+    ./modules/apps/packages.nix
+    ./modules/apps/programs.nix
     ./modules/hardware/laptop.nix
     ./modules/hardware/nvidia.nix
-    ./modules/packages.nix
-    ./modules/programs.nix
     ./modules/services/networking.nix
     ./modules/services/services.nix
     /etc/nixos/hardware-configuration.nix
