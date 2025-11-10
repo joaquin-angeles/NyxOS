@@ -11,9 +11,9 @@
     # Configurations
     ./dotfiles.nix
     ./modules/home/environment.nix
+    ./modules/home/fonts.nix
 
     # Packages
-    ./modules/home/apps/fonts.nix
     ./modules/home/apps/packages.nix
     ./modules/home/apps/programs.nix
 
