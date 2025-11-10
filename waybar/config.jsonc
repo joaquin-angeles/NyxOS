@@ -1,8 +1,8 @@
 {
   "include": "~/.config/waybar/modules.json",
   "layer": "top",
-  "position": "top",
-  "height": 28,
+  "position": "bottom",
+  "height": 32,
   "spacing": 0,
   "modules-left": [
     "custom/menu",
