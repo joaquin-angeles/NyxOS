@@ -2,6 +2,7 @@
 
 {
   home.file.".config/foot".source = ../foot;
+  home.file.".config/fontconfig/fonts.conf".source = ../fonts/fonts.conf;
   home.file.".config/hypr".source = ../hyprland;
   home.file.".config/mako".source = ../mako;
   home.file.".config/nvim".source = ../neovim;
