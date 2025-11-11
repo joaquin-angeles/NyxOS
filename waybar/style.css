@@ -4,7 +4,7 @@ window#waybar {
   font: 13.5pt "JetBrainsMono Nerd Font";
   background-color: @bg;
   border-top: 1px solid lighter(@bright-bg);
-  color: #afafaf;
+  color: @fg;
 }
 
 /* Modules with top margin */
@@ -12,10 +12,13 @@ window#waybar {
 #custom-menu,
 #custom-power,
 #network,
-#pulseaudio,
 #clock,
 #workspaces button {
   margin-top: 1pt;
+}
+
+#clock {
+  color: @yellow;
 }
 
 /* Custom menu section */
@@ -40,7 +43,8 @@ window#waybar {
 
 /* PulseAudio module */
 #pulseaudio {
-  font-size: 11.25pt;
+  font-size: 11.5pt;
+  margin-top: 1.5pt;
   margin-right: 17.5pt;
 }
 
@@ -63,7 +67,7 @@ window#waybar {
 #workspaces button {
   min-width: 12px;
   padding: 0 6px;
-  color: #afafaf;
+  color: @fg;
 }
 
 #workspaces button.active {
