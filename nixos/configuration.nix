@@ -34,6 +34,12 @@
     xdgOpenUsePortal = true;
   };
 
+  # Hardware settings
+  hardware.graphics = {
+    enable = true; 
+    enable32Bit = true;
+  };
+
   # Nix package manager
   nix.optimise.automatic = true;
   nix.settings = {
