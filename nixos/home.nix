@@ -12,6 +12,8 @@
     ./dotfiles.nix
     ./modules/home/environment.nix
 
+    ./modules/home/apps/fonts.nix # Fonts
+
     # Packages
     ./modules/home/apps/packages.nix
     ./modules/home/apps/programs.nix
