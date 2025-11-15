@@ -10,9 +10,8 @@
   imports = [
     # Configurations
     ./dotfiles.nix
-    ./modules/home/environment.nix
-
-    ./modules/home/apps/fonts.nix # Fonts
+    ./modules/home/environment.nix # Environment variables
+    ./modules/home/fonts.nix # Fonts
 
     # Packages
     ./modules/home/apps/packages.nix
