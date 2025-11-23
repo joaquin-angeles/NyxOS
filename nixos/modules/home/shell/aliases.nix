@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.zsh.shellAliases = {
@@ -6,15 +6,16 @@
     c = "clear";
     grep = "rg";
     k = "kill";
-    lsa = "eza -a";
-    ll = "eza -lh";
-    lla = "eza -lha";
-    ls = "eza";
+    ll = "eza --icons -lh";
+    lla = "eza --icons -lha";
+    ls = "eza --icons";
+    lsa = "eza --icons -a";
     nv = "nvim";
     pk = "pkill";
     v = "nvim";
     vim = "nvim";
     "nix-shell" = "nix-shell --run $SHELL";
     yazi = "yz";
+    zlj = "zellij";
   };
 }
