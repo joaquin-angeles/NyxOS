@@ -2,15 +2,15 @@
 
 {
   # Font packages
-  home.packages = with pkgs; [
-    corefonts
-    inter
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.meslo-lg
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji-blob-bin
-  ];
+  # home.packages = with pkgs; [
+  #   corefonts
+  #   inter
+  #   nerd-fonts.jetbrains-mono
+  #   nerd-fonts.meslo-lg
+  #   noto-fonts
+  #   noto-fonts-cjk-sans
+  #   noto-fonts-emoji-blob-bin
+  # ];
 
   # Font configurations
   fonts.fontconfig.enable = true;
