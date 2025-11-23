@@ -4,7 +4,7 @@
   # Modules
   imports = [
     ./modules/apps/development-tools.nix
-    ./modules/apps/fonts.nix
+    # ./modules/apps/fonts.nix
     ./modules/apps/packages.nix
     ./modules/apps/programs.nix
     ./modules/hardware/laptop.nix
@@ -52,8 +52,14 @@
   system.stateVersion = "25.05";
 
   # Timezone
-  services.timesyncd.enable = false;
   time.timeZone = "Asia/Manila";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocales = [ "en_GB.UTF-8/UTF-8" ];
+    extraLocaleSettings = {
+      LC_TIME = "en_GB.UTF-8";
+    };
+  };
 
   # sudo-rs
   security.sudo.enable = false;

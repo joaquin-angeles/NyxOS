@@ -14,5 +14,6 @@
     patch
     pkgconf
     texinfo
+    wget
   ];
 }

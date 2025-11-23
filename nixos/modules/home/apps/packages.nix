@@ -11,6 +11,7 @@
     file-roller
     foot
     grim
+    hyprlock
     hyprpicker
     hyprsunset
     imv
@@ -26,7 +27,6 @@
     nwg-look
     ripgrep
     stow
-    unstable.hyprlock
     unstable.hyprshot
     unstable.impala
     unstable.swayosd

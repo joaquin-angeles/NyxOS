@@ -4,7 +4,6 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     LANG = "en_US.UTF-8";
-    LC_ALL = "en_US.UTF-8";
     PATH = "$HOME/.local/bin:$HOME/.cargo/bin:${pkgs.stdenv.cc}/bin:$PATH";
     QT_QPA_PLATFORMTHEME = "qt6ct";
     TERM = "xterm-256color";
