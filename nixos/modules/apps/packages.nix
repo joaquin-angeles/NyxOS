@@ -9,13 +9,5 @@
     wl-clipboard
     xdg-user-dirs
     zenity
-
-    (lutris.override {
-      # Run windows games
-      extraPkgs = pkgs: [
-        pkgs.wineWowPackages.stagingFull
-        pkgs.winetricks
-      ];
-    })
   ];
 }

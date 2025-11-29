@@ -4,7 +4,6 @@
   # User packages
   home.packages = with pkgs; [
     bat
-    bibata-cursors
     btop
     cliphist
     eza
@@ -25,7 +24,6 @@
     mpv
     neovim
     nitch
-    nwg-look
     ripgrep
     stow
     unstable.hyprshot
