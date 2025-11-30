@@ -28,10 +28,6 @@
     ./modules/home/environment.nix # Environment variables
     ./modules/home/apps/fonts.nix # Fonts
 
-    # Flatpaks
-    pkgs.lib.getFlake "nix-flatpak".homeManagerModules.nix-flatpak
-    ./modules/home/apps/flatpaks.nix
-
     # Packages
     ./modules/home/apps/packages.nix # User packages
     ./modules/home/apps/programs.nix # Program configuration

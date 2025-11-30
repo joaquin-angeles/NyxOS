@@ -5,17 +5,16 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Main branch
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Unstable branch
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # Flatpaks
     
     # Home manager
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   # Integrations
-  outputs = { self, nixpkgs, unstable, nix-flatpak, home-manager, ... }:
+  outputs = { self, nixpkgs, unstable, home-manager, ... }:
     let
       system = "x86_64-linux";
     in {
@@ -23,7 +22,6 @@
       nixosConfigurations.home = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          nix-flatpak.nixosModules.nix-flatpak
           ./configuration.nix
 
           # Home manager
