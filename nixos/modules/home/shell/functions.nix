@@ -47,7 +47,7 @@
 
     # Set window titles
     precmd() {
-      print -Pn "\e]0;%n@%m:%~\a"
+      print -Pn "\e]0;%~\a"
     }
   '';
 }

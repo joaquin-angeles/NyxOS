@@ -22,12 +22,12 @@
     libsForQt5.qtstyleplugin-kvantum
     mako
     mpv
-    neovim
     nitch
     ripgrep
     stow
     unstable.hyprshot
     unstable.impala
+    unstable.neovim
     unstable.swayosd
     unstable.wiremix
     waybar
