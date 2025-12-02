@@ -12,7 +12,6 @@
     grim
     hyprlock
     hyprpicker
-    hyprsunset
     imv
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
@@ -28,6 +27,7 @@
     unstable.hyprshot
     unstable.impala
     unstable.neovim
+    unstable.sunsetr
     unstable.swayosd
     unstable.wiremix
     waybar
