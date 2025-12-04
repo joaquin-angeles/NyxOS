@@ -2,7 +2,6 @@
 
 {
   programs.hyprland.enable = true; # Hyprland
-  programs.mango.enable = true; # MangoWC
 
   # Steam
   programs.steam = {

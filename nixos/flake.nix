@@ -6,15 +6,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Main branch
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Unstable branch
 
-    # MangoWC
-    mango = {
-      url = "github:DreamMaoMao/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Flake parts
-    flake-parts.url = "github:hercules-ci/flake-parts";
-
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -32,7 +23,6 @@
         inherit system;
         modules = [
           ./configuration.nix
-          inputs.mango.nixosModules.mango # MangoWC
 
           # Home manager
           home-manager.nixosModules.home-manager
