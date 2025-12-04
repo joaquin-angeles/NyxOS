@@ -7,6 +7,8 @@
     enableZshIntegration = true;
   };
 
+  programs.home-manager.enable = true; # Home Manager
+
   # rofi
   programs.rofi = {
     enable = true;
