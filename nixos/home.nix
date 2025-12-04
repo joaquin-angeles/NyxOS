@@ -24,7 +24,7 @@
   # Modules
   imports = [
     # Configurations
-    ./dotfiles.nix
+    ./modules/home/dotfiles.nix
     ./modules/home/environment.nix # Environment variables
     ./modules/home/apps/fonts.nix # Fonts
 
