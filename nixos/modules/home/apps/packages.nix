@@ -8,7 +8,6 @@
     cliphist
     eza
     file-roller
-    foot
     grim
     hyprlock
     hyprpicker
@@ -26,6 +25,7 @@
     stow
     unstable.hyprshot
     unstable.impala
+    unstable.foot
     unstable.neovim
     unstable.sunsetr
     unstable.swayosd
