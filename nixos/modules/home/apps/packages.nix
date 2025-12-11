@@ -20,7 +20,6 @@
     libsForQt5.qtstyleplugin-kvantum
     mako
     mpv
-    nitch
     ripgrep
     stow
     unstable.hyprshot

@@ -2,16 +2,12 @@
 
 {
   programs.zsh.initContent = ''
-    # Cursor configuration
-    precmd() {
-      echo -ne '\e[5 q'
-    }
     # SSH-compatible terminal
     export TERM=xterm-256color
 
     # Fetch with nitch
-    if command -v nitch >/dev/null 2>&1; then
-      nitch
+    if command -v fastfetch >/dev/null 2>&1; then
+      fastfetch
       echo ""
     fi
 

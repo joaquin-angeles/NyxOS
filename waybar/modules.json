@@ -33,7 +33,7 @@
     "format-disconnected": "󰤭",
     "format-ethernet": "󰈀",
     "tooltip-format": "{essid} ({signalStrength}%)",
-    "on-click": "kitty --title=iwctl -e impala"
+    "on-click": "foot --title=iwctl -e impala"
   },
 
   "bluetooth": {
@@ -60,22 +60,22 @@
         ""
       ]
     },
-    "on-click": "kitty --title=Wiremix -e wiremix",
+    "on-click": "foot --title=Wiremix -e wiremix",
     "tooltip-format": "Playing at {volume}%",
   },
 
   "battery": {
-    "format": "{icon} {capacity}%",
+    "format": "{icon}",
     "format-icons": [
       "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
     ],
-    "format-full": "󱈑 {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-warning": "󰂃 {capacity}%",
+    "format-full": "󱈑",
+    "format-charging": "󰂄",
+    "format-warning": "󰂃",
     "tooltip": true,
-    "tooltip-format": "Discharging",
-    "tooltip-format-charging": "Charging",
-    "tooltip-format-full": "Full",
+    "tooltip-format": "Discharging ({capacity}%)",
+    "tooltip-format-charging": "Charging ({capacity}%)",
+    "tooltip-format-full": "Full (100%)",
     "interval": 1,
   },
 
