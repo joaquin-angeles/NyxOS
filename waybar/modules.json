@@ -33,7 +33,7 @@
     "format-disconnected": "󰤭",
     "format-ethernet": "󰈀",
     "tooltip-format": "{essid} ({signalStrength}%)",
-    "on-click": "foot --title=iwctl -e impala"
+    "on-click": "alacritty --title=iwctl -e impala"
   },
 
   "bluetooth": {
@@ -60,7 +60,7 @@
         ""
       ]
     },
-    "on-click": "foot --title=Wiremix -e wiremix",
+    "on-click": "alacritty --title=Wiremix -e wiremix",
     "tooltip-format": "Playing at {volume}%",
   },
 

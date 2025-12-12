@@ -12,15 +12,3 @@ function Status:name()
   end
   return ui.Span(" " .. h.name .. linked)
 end
-
--- Remove file size from status bar
-function Status:render(area)
-  self.area = area
-  local left = ui.Line { self:mode(), self:name() }
-  local right = ui.Line { self:permissions(), self:position() }
-  return {
-    ui.Paragraph(area, { left }),
-    ui.Paragraph(area, { right }):align(ui.Paragraph.RIGHT),
-    table.unpack(Progress:render(area, right:width()))
-  }
-end

@@ -2,6 +2,9 @@
 
 {
   programs.zsh.initContent = ''
+    # Cursor configuration
+    printf "\\033[5 q"
+
     # Fetch
     if command -v fastfetch >/dev/null 2>&1; then
       fastfetch

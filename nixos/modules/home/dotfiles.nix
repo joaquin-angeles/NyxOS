@@ -2,6 +2,7 @@
 
 {
   home.file.".config/alacritty".source = ../../../alacritty;
+  home.file.".config/fastfetch".source = ../../../fastfetch;
   home.file.".config/hypr".source = ../../../hyprland;
   home.file.".config/mako".source = ../../../mako;
   # home.file.".config/nvim".source = ../../../neovim;

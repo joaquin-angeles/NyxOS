@@ -7,6 +7,7 @@
     btop
     cliphist
     eza
+    fd
     file-roller
     grim
     hyprlock

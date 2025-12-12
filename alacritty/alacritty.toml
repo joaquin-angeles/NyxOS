@@ -1,8 +1,14 @@
 [window]
+# Background transparency
 opacity = 0.8
+
+# Window padding
 padding = { x = 5, y = 5 }
+
+# Centering
 dynamic_padding = true
 
+# Font configurations
 [font]
 normal = { family = "monospace", style = "Regular" }
 bold = { family = "monospace", style = "Bold" }
@@ -10,8 +16,14 @@ italic = { family = "monospace", style = "Italic" }
 bold_italic = { family = "monospace", style = "Bold Italic" }
 size = 13.5
 
+# $TERM correction
 [env]
 TERM = "xterm-256color"
+
+# Colorscheme
+[colors.cursor]
+text   = "#1c1c1c"
+cursor = "#afafaf"
 
 [colors.primary]
 background = "#1c1c1c"
