@@ -2,10 +2,7 @@
 
 {
   programs.zsh.initContent = ''
-    # SSH-compatible terminal
-    export TERM=xterm-256color
-
-    # Fetch with nitch
+    # Fetch
     if command -v fastfetch >/dev/null 2>&1; then
       fastfetch
       echo ""
