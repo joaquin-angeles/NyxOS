@@ -22,9 +22,9 @@
     mpv
     ripgrep
     stow
+    unstable.alacritty-graphics
     unstable.hyprshot
     unstable.impala
-    unstable.foot
     unstable.neovim
     unstable.sunsetr
     unstable.swayosd

@@ -1,0 +1,39 @@
+[window]
+opacity = 0.8
+padding = { x = 5, y = 5 }
+dynamic_padding = true
+
+[font]
+normal = { family = "monospace", style = "Regular" }
+bold = { family = "monospace", style = "Bold" }
+italic = { family = "monospace", style = "Italic" }
+bold_italic = { family = "monospace", style = "Bold Italic" }
+size = 13.5
+
+[colors.primary]
+background = "#191919"
+foreground = "#afafaf"
+
+[colors.selection]
+text = "#1c1c1c"
+background = "#afafaf"
+
+[colors.normal]
+black   = "#191919"
+red     = "#865054"
+green   = "#5f705f"
+yellow  = "#8c8260"
+blue    = "#5f708c"
+magenta = "#75607a"
+cyan    = "#5f7a7a"
+white   = "#afafaf"
+
+[colors.bright]
+black   = "#3d3d3d"
+red     = "#976061"
+green   = "#729472"
+yellow  = "#a4926b"
+blue    = "#7294a4"
+magenta = "#9272a4"
+cyan    = "#72a4a4"
+white   = "#f1f1f1"

@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  home.file.".config/foot".source = ../../../foot;
+  home.file.".config/alacritty".source = ../../../alacritty;
   home.file.".config/hypr".source = ../../../hyprland;
   home.file.".config/mako".source = ../../../mako;
   # home.file.".config/nvim".source = ../../../neovim;
