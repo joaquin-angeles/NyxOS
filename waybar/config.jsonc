@@ -6,9 +6,8 @@
   "spacing": 0,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/window",
   ],
-  // "modules-center": [ "clock" ],
+  "modules-center": [ "hyprland/window" ],
   "modules-right": [
     "network",
     "pulseaudio",

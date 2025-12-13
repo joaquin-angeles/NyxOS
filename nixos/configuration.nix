@@ -41,6 +41,11 @@
   fonts = {
     enableDefaultPackages = true;
     fontconfig.enable = true;
+    fontconfig.antialias = true;
+    fontconfig.hinting.enable = true;
+    fontconfig.hinting.style = "medium";
+    fontconfig.subpixel.rgba = "rgb";
+    fontconfig.subpixel.lcdfilter = "default";
     fontDir.enable = true;
     packages = with pkgs; [
       corefonts
