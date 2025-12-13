@@ -5,10 +5,10 @@
     bat = "bat --color=always --theme=base16";
     cat = "bat --color=always --theme=base16";
     grep = "rg";
-    ll = "eza --icons -lh";
-    lla = "eza --icons -lha";
+    ll = "eza  -lh --icons";
+    lla = "eza -lha --icons";
     ls = "eza --icons";
-    lsa = "eza --icons -a";
+    lsa = "eza -a --icons";
     vim = "nvim";
     yazi = "yz";
     zlj = "zellij";
