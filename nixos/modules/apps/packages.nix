@@ -9,5 +9,11 @@
     wl-clipboard
     xdg-user-dirs
     zenity
+    # (lutris.override {
+    #   extraLibraries =  pkgs: [
+    #     winetricks
+    #     unstable.wineWowPackages.stagingFull
+    #   ];
+    # })
   ];
 }
