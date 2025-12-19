@@ -1,9 +1,15 @@
 require "nvchad.autocmds"
 
+-- Absolute line numbers in Insert
+vim.api.nvim_create_autocmd("InsertEnter", {
+  callback = function()
+    vim.o.relativenumber = false
+  end,
+})
 
--- Cursor configuration
--- vim.api.nvim_create_autocmd("VimLeave", {
---   callback = function()
---     vim.cmd("set guicursor=a:ver120-blinkwait0-blinkon500-blinkoff500")
---   end,
--- })
+-- Relative lines on Normal mode
+vim.api.nvim_create_autocmd("InsertLeave", {
+  callback = function()
+    vim.o.relativenumber = true
+  end,
+})

@@ -2,7 +2,7 @@ require "nvchad.options"
 
 -- add yours here!
 
--- local o = vim.o
+local opt = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
 
 -- Transparent background
@@ -11,21 +11,8 @@ vim.cmd [[
 ]]
 
 -- Line numbers
-vim.o.number = true
-vim.o.relativenumber = true
+opt.number = true
+opt.relativenumber = true
 
--- Absolute line numbers in Insert
-vim.api.nvim_create_autocmd("InsertEnter", {
-  callback = function()
-    vim.o.relativenumber = false
-  end,
-})
-
--- Relative lines on Normal mode
-vim.api.nvim_create_autocmd("InsertLeave", {
-  callback = function()
-    vim.o.relativenumber = true
-  end,
-})
-
-vim.o.swapfile = false -- Disable swap file
+opt.swapfile = false -- Disable swap file
+opt.guicursor = "n-v-c:block,i:block-blinkwait0-blinkon500-blinkoff500" -- Cursor configuration

@@ -2,8 +2,13 @@
 
 {
   programs.zsh.initContent = ''
-    # Cursor configuration
-    printf '\e[5 q'
+    # Cursor and title configuration
+    precmd() {
+      printf '\e[1 q'
+      local term
+      term=$(ps -o comm= -p $(ps -o ppid= -p $$))
+      print -Pn "\e]0;%~ | $term\a"
+    }
 
     # Fetch
     if command -v fastfetch >/dev/null 2>&1; then
@@ -38,7 +43,6 @@
       local tmp
       tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
       yazi "$@" --cwd-file="$tmp"
-      printf '\e[5 q'
       if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         rm -f "$tmp"
@@ -46,12 +50,6 @@
           cd "$dir" || return 1
         fi
       fi
-    }
-
-    # Set window titles
-    precmd() {
-      print -Pn "\e]0;%~\a"
-      printf '\e[5 q'
     }
   '';
 }
