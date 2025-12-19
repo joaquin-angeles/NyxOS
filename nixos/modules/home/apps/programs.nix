@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   # fzf
   programs.fzf = {
@@ -7,11 +6,13 @@
     enableZshIntegration = true;
   };
 
-  programs.home-manager.enable = true; # Home Manager
-
   # NH
   programs.nh.enable = true;
-  programs.nix-your-shell.nix-output-monitor.enable
+  programs.nix-your-shell = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-output-monitor.enable = true;
+  };
 
   # rofi
   programs.rofi = {
