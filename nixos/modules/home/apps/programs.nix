@@ -9,10 +9,13 @@
 
   programs.home-manager.enable = true; # Home Manager
 
+  # NH
+  programs.nh.enable = true;
+  programs.nix-your-shell.nix-output-monitor.enable
+
   # rofi
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
     plugins = [ pkgs.rofi-emoji ];
   };
 

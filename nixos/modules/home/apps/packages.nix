@@ -3,7 +3,6 @@
 {
   # User packages
   home.packages = with pkgs; [
-    alacritty
     bat
     btop
     cliphist
@@ -23,6 +22,7 @@
     mpv
     ripgrep
     stow
+    unstable.alacritty-graphics
     unstable.hyprshot
     unstable.impala
     unstable.neovim

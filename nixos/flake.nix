@@ -3,12 +3,12 @@
 
   # Inputs (repositories)
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Main branch
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Main branch
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Unstable branch
 
     # Home manager
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -18,7 +18,6 @@
     let
       system = "x86_64-linux";
     in {
-      nixpkgs.config.allowUnfree = true;
       nixosConfigurations.home = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
@@ -27,6 +26,8 @@
           # Home manager
           home-manager.nixosModules.home-manager
           {
+            nixpkgs.config.allowUnfree = true;
+
             home-manager = {
               backupFileExtension = "bak";
               users.joaquin = import ./home.nix;
