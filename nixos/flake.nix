@@ -1,5 +1,5 @@
 {
-  description = "Joaquin's NixOS";
+  description = "NyxOS";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Stable nixpkgs
@@ -15,7 +15,7 @@
   # Main integrations
   outputs = inputs@{ self, nixpkgs, unstable, home-manager, ... }: {
     # Imported configurations
-    nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nyx = nixpkgs.lib.nixosSystem {
       modules = [
         ./configuration.nix # System configuration
 
