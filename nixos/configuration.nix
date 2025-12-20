@@ -4,7 +4,7 @@
   # Modules
   imports = [
     ./modules/apps/development-tools.nix
-    # ./modules/apps/fonts.nix
+    ./modules/apps/fonts.nix
     ./modules/apps/packages.nix
     ./modules/apps/programs.nix
     ./modules/hardware/laptop.nix
@@ -36,27 +36,6 @@
     };
   };
   environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
-
-  # Font fixes
-  fonts = {
-    enableDefaultPackages = true;
-    fontconfig.enable = true;
-    fontconfig.antialias = true;
-    fontconfig.hinting.enable = true;
-    fontconfig.hinting.style = "medium";
-    fontconfig.subpixel.rgba = "rgb";
-    fontconfig.subpixel.lcdfilter = "default";
-    fontDir.enable = true;
-    packages = with pkgs; [
-      corefonts
-      inter
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.meslo-lg
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-emoji-blob-bin
-    ];
-  };
 
   # Hardware settings
   hardware.graphics = {

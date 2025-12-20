@@ -33,7 +33,6 @@
               users.joaquin = import ./home.nix;
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
             };
           }
 

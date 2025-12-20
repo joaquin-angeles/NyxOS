@@ -15,4 +15,4 @@ opt.number = true
 opt.relativenumber = true
 
 opt.swapfile = false -- Disable swap file
-opt.guicursor = "n-v-c:block,i:block-blinkwait0-blinkon500-blinkoff500" -- Cursor configuration
+opt.guicursor = "i:block-blinkwait0-blinkon500-blinkoff500" -- Cursor configuration
