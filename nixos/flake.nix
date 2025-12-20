@@ -1,10 +1,9 @@
 {
   description = "Joaquin's NixOS";
 
-  # Inputs (repositories)
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Main branch
-    unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Unstable branch
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Stable nixpkgs
+    unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Rolling nixpkgs
 
     # Home manager
     home-manager = {
@@ -13,40 +12,37 @@
     };
   };
 
-  # Integrations
-  outputs = inputs@{ self, nixpkgs, unstable, home-manager, ... }:
-    let
-      system = "x86_64-linux";
-    in {
-      nixosConfigurations.home = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configuration.nix
+  # Main integrations
+  outputs = inputs@{ self, nixpkgs, unstable, home-manager, ... }: {
+    # Imported configurations
+    nixosConfigurations.home = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./configuration.nix # System configuration
 
-          # Home manager
-          home-manager.nixosModules.home-manager
-          {
-            nixpkgs.config.allowUnfree = true;
+        # User configuration
+        home-manager.nixosModules.home-manager
+        {
+          nixpkgs.config.allowUnfree = true; # Allow proprietary
+          home-manager = {
+            backupFileExtension = "bak"; # Fallback for existing files
+            users.joaquin = import ./home.nix; # Main configuration file
+            useGlobalPkgs = true; # Merge into packages
+            useUserPackages = true; # Utilize per-user package installation
+          };
+        }
 
-            home-manager = {
-              backupFileExtension = "bak";
-              users.joaquin = import ./home.nix;
-              useGlobalPkgs = true;
-              useUserPackages = true;
-            };
-          }
-
-          # Overlays
-          ({ pkgs, ... }: {
-            nixpkgs.overlays = [
-              (final: prev: {
-                unstable = import unstable {
-                  system = pkgs.system;
-                };
-              })
-            ];
-          })
-        ];
-      };
+        # Package overlays
+        ({ pkgs, ... }: {
+          nixpkgs.overlays = [
+            (final: prev: {
+              # Unstable (rolling) package integration
+              unstable = import unstable {
+                system = pkgs.stdenv.hostPlatform.system;
+              };
+            })
+          ];
+        })
+      ];
     };
+  };
 }
