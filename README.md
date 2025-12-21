@@ -1,4 +1,5 @@
 # NyxOS
+(Run Super, shift + SPC to open the cheatsheet)
 
 A modern, extensible Hyprland/Wayland configuration for NixOS with a striking dark aesthetic that doesn't sacrifice vibrant colors.
 
