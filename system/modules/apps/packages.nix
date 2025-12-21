@@ -4,8 +4,8 @@
   # System packages
   environment.systemPackages = with pkgs; [
     brightnessctl
-    nautilus
     lutris
+    nautilus
     unstable.bluetui
     wl-clipboard
     xdg-user-dirs

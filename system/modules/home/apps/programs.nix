@@ -14,8 +14,6 @@
       gamemode
       gamescope
       mangohud
-      protontricks
-      umu-launcher
     ];
   };
 
