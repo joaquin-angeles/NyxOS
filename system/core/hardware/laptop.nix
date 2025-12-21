@@ -1,14 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Packages
-  environment.systemPackages = with pkgs; [
-    acpi
-  ];
+  services.auto-cpufreq.enable = true; # Auto CPU frequency
 
-  # Power-savers
-  # Disable PPD
-  services.power-profiles-daemon.enable = false;
+  services.power-profiles-daemon.enable = false; # Disable PPD
+
+  environment.systemPackages = with pkgs; [ acpi ]; # ACPI
+
   # TLP
   services.tlp.enable = true;
   services.tlp.settings = {
@@ -16,8 +14,6 @@
     CPU_SCALING_GOVERNOR_ON_BAT = "";
     CPU_SCALING_DRIVER = "";
   };
-  # Auto CPU frequency
-  services.auto-cpufreq.enable = true;
-  # Upower
-  services.upower.enable = true;
+
+  services.upower.enable = true; # Upower
 }

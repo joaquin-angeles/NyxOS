@@ -1,13 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
-  # ❌ nouveau
-  boot = {
-    blacklistedKernelModules = [ "nouveau" ];
-  };
+  boot.blacklistedKernelModules = [ "nouveau" ]; # ❌ nouveau
 
-  # Load Nvidia drivers 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ]; # Load Nvidia drivers for WL and X11
+   
+  # NVidia configuration
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.finegrained = true;

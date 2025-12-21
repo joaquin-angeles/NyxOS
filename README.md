@@ -7,9 +7,11 @@ NyxOS delivers a sleek, performant desktop environment built entirely with Nix f
 
 # Features
 - Lightweight & Performant
+
 Hyprland is tuned to near-maximum efficiency, ensuring the environment stays out of the way of demanding workloads.
 
 - Near-Complete Daily Driver
+
 Includes everything needed for a functional desktop without bloat:
   - Minimal yet powerful Waybar panel
   - Fast app launcher (Rofi/Wofi)
@@ -17,6 +19,7 @@ Includes everything needed for a functional desktop without bloat:
   - Default browser and core apps
 
 - Outstanding Developer Experience
+
 A fully configured dev setup via Home Manager:
   - Neovim with sensible defaults
   - Zsh + fzf + zoxide + useful aliases
@@ -24,6 +27,7 @@ A fully configured dev setup via Home Manager:
   - And more productivity tools out of the box
 
 - Coherent & Declarative Configuration
+
 Almost everything is managed in pure Nix via Home Manager—no scattered config files in multiple languages.
 
 # Installation

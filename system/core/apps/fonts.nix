@@ -1,17 +1,18 @@
 { config, pkgs, inputs, ... }:
 
 {
+  # Font configurations
   fonts = {
     enableDefaultPackages = true;
     fontconfig.enable = true;
-    fontconfig.antialias = true;
-    fontconfig.hinting.enable = true;
-    fontconfig.hinting.style = "medium";
+    fontconfig.antialias = true; # Enable antialiasing
+    fontconfig.hinting.enable = true; 
+    fontconfig.hinting.style = "medium"; # Configure antialiasing
     fontconfig.subpixel.rgba = "rgb";
     fontconfig.subpixel.lcdfilter = "default";
-    fontDir.enable = true;
+    fontDir.enable = true; # Directory correction
 
-    # Fonts
+    # Packages
     packages = with pkgs; [
       corefonts
       inter
