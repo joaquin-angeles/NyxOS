@@ -1,10 +1,9 @@
 # NyxOS
 (Run Super, shift + SPC to open the cheatsheet)
 
-A modern, extensible Hyprland/Wayland configuration for NixOS with a striking dark aesthetic that doesn't sacrifice vibrant colors.
+A *modern, extensible* **Hyprland/Wayland** configuration for NixOS with a **striking dark aesthetic** that *doesn't sacrifice vibrant colors*.
 
 NyxOS delivers a sleek, performant desktop environment built entirely with Nix flakes and Home Manager—fully declarative, reproducible, and easy to customize.
-Features
 
 # Features
 - Lightweight & Performant
