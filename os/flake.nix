@@ -10,12 +10,19 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Zen Browser
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # Main integrations
-  outputs = inputs@{ self, nixpkgs, unstable, home-manager, ... }: {
+  outputs = { self, nixpkgs, unstable, home-manager, ... }: {
     # Imported configurations
     nixosConfigurations.nyxos = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix # System configuration
 
@@ -28,6 +35,7 @@
             users.joaquin = import ./home.nix; # Main configuration file
             useGlobalPkgs = true; # Merge into packages
             useUserPackages = true; # Utilize per-user package installation
+            extraSpecialArgs = { inherit inputs; }; # Accept inputs 
           };
         }
 

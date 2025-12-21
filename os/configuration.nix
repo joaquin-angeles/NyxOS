@@ -3,14 +3,14 @@
 {
   # Modules
   imports = [
-    ./modules/apps/development-tools.nix
-    ./modules/apps/fonts.nix
-    ./modules/apps/packages.nix
-    ./modules/apps/programs.nix
-    ./modules/hardware/laptop.nix
-    ./modules/hardware/nvidia.nix
-    ./modules/services/networking.nix
-    ./modules/services/services.nix
+    ./system/apps/development-tools.nix
+    ./system/apps/fonts.nix
+    ./system/apps/packages.nix
+    ./system/apps/programs.nix
+    ./system/hardware/laptop.nix
+    ./system/hardware/nvidia.nix
+    ./system/services/networking.nix
+    ./system/services/services.nix
     /etc/nixos/hardware-configuration.nix
   ];
 

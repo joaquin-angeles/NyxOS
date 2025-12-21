@@ -24,18 +24,18 @@
   # Modules
   imports = [
     # Configurations
-    ./modules/home/dotfiles.nix
-    ./modules/home/environment.nix # Environment variables
-    ./modules/home/fonts.nix # Fonts
+    ./home/dotfiles.nix
+    ./home/environment.nix # Environment variables
+    ./home/fonts.nix # Fonts
 
     # Packages
-    ./modules/home/apps/packages.nix # User packages
-    ./modules/home/apps/programs.nix # Program configuration
+    ./home/apps/packages.nix # User packages
+    ./home/apps/programs.nix # Program configuration
 
     # Zsh
-    ./modules/home/shell/base.nix # Enabling shell and/or shell plugins
-    ./modules/home/shell/aliases.nix # Shell aliases
-    ./modules/home/shell/functions.nix # Pre-initialization
-    # ./modules/home/shell/keybinds.nix
+    ./home/shell/base.nix # Enabling shell and/or shell plugins
+    ./home/shell/aliases.nix # Shell aliases
+    ./home/shell/functions.nix # Pre-initialization
+    # ./home/shell/keybinds.nix
   ];
 }
