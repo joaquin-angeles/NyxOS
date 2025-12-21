@@ -6,6 +6,19 @@
     enableZshIntegration = true;
   };
 
+  # Lutris
+  programs.lutris = {
+    enable = true;
+    protonPackages = with pkgs; [ unstable.proton-ge-bin ];
+    extraPackages = with pkgs; [
+      gamemode
+      gamescope
+      mangohud
+      protontricks
+      umu-launcher
+    ];
+  };
+
   # NH
   programs.nh.enable = true;
   programs.nix-your-shell = {
