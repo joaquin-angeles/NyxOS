@@ -19,7 +19,7 @@
   };
 
   # Main integrations
-  outputs = { self, nixpkgs, unstable, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, unstable, home-manager, zen-browser, ... }: {
     # Imported configurations
     nixosConfigurations.nyxos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };

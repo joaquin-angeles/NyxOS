@@ -1,4 +1,0 @@
-[[mgr.prepend_keymap]]
-on = "c"
-run = "cancel_cut_copy"
-desc = "Cancel Cut/Copy"

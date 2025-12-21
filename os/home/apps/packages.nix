@@ -32,7 +32,6 @@
     unstable.wiremix
     waybar
     wbg
-    yazi
     zellij
     zsh-powerlevel10k
   ];

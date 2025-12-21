@@ -1,7 +1,0 @@
-[mgr]
-ratio = [1, 2, 3]
-title_format = "{cwd}"
-show_symlink = false
-
-[preview]
-ueberzug_scale = 1.0
