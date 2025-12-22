@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
-  {
+{
   # fzf
   programs.fzf = {
     enable = true;
@@ -46,17 +46,39 @@
           { name = "*/"; is = "link"; fg = "cyan"; }
         ];
       };
-      initLua = ../../../yazi/init.lua;
-      plugins = {
-        chmod with pkgs; = yaziPlugins.chmod;
-        full-border with pkgs; = yaziPlugins.full-border;
-        smart-enter with pkgs; = yaziPlugins.smart-enter;
+    };
+    keymap = {
+      mgr.prepend_keymap = [
+        {
+          on = "c";
+          run = "cancel_cut_copy";
+          desc = "Cancel Cut/Copy";
+        }
+      ];
+    };
+    settings = {
+      log = {
+        enabled = false;
+      };
+      mgr = {
+        show_hidden = false;
+        sort_dir_first = true;
+        ratio = [ 1 2 3 ];
+        title_format = "{cwd}";
+        show_symlink = false;
       };
     };
-
-    # zoxide
-    programs.zoxide = {
-      enable = true;
-      enableZshIntegration = true;
+    initLua = ../../../yazi/init.lua;
+    plugins = {
+      chmod = pkgs.yaziPlugins.chmod;
+      full-border = pkgs.yaziPlugins.full-border;
+      smart-enter = pkgs.yaziPlugins.smart-enter;
     };
-  }
+  };
+
+  # zoxide
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+}

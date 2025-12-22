@@ -10,7 +10,7 @@
     ls = "eza --icons";
     lsa = "eza -a --icons";
     vim = "nvim";
-    yz = "yazi";
+    yazi = "yz";
     zlj = "zellij";
   };
 }

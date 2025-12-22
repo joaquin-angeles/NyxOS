@@ -35,11 +35,14 @@
         fi
       '
     }
+
+    # Better Yazi
     function yz() {
-      local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+      local tmp cwd
+      tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
       yazi "$@" --cwd-file="$tmp"
-      local cwd="$(cat -- "$tmp")"
-      if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+      IFS= read -r cwd < "$tmp"
+      if [[ -n "$cwd" && "$cwd" != "$PWD" ]]; then
         builtin cd -- "$cwd"
       fi
       rm -f -- "$tmp"

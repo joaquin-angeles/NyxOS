@@ -1,8 +1,9 @@
-require("chmod"):setup()
-require("full-border"):setup()
-require("smart-enter"):setup()
+require("chmod")
+require("full-border"):setup({
+  type = ui.Border.PLAIN,
+})
+require("smart-enter")
 
--- Show symlink path in status bar
 function Status:name()
   local h = cx.active.current.hovered
   if not h then
