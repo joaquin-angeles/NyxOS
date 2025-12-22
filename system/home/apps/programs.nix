@@ -14,6 +14,7 @@
       gamemode
       gamescope
       mangohud
+      umu-launcher
     ];
   };
 
