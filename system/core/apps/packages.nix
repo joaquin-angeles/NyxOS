@@ -4,7 +4,6 @@
   # System packages
   environment.systemPackages = with pkgs; [
     brightnessctl
-    lutris
     nautilus
     unstable.bluetui
     wl-clipboard
