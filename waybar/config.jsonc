@@ -2,7 +2,7 @@
   "include": "./modules.json",
   "layer": "top",
   "position": "top",
-  "height": 28,
+  "height": 24,
   "spacing": 0,
   "modules-left": [
     "hyprland/workspaces",
