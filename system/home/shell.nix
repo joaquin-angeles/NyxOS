@@ -3,8 +3,11 @@
 {
   # Shell integrations
   imports = [
-    ./shell/integrations/*
-    ./shell/*.nix
+    ./shell/aliases.nix
+    ./shell/binds.nix
+    ./shell/functions.nix
+    ./shell/integrations/programs.nix
+    ./shell/integrations/yazi.nix
   ];
 
   # Base zsh configuration

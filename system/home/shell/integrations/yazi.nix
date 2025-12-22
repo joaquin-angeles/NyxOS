@@ -36,7 +36,7 @@
         show_symlink = false;
       };
     };
-    initLua = ../../../yazi/init.lua;
+    initLua = ../../../../yazi/init.lua;
     plugins = {
       chmod = pkgs.yaziPlugins.chmod;
       full-border = pkgs.yaziPlugins.full-border;

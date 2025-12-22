@@ -19,6 +19,5 @@
     plugins = [ pkgs.rofi-emoji ];
   };
 
-  # NH
-  programs.nh.enable = true;
+  programs.nh.enable = true; # NH
 }
