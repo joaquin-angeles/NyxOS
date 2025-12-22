@@ -2,9 +2,6 @@ require("chmod")
 require("full-border"):setup({
   type = ui.Border.PLAIN,
 })
-require("session"):setup {
-  sync_yanked = true,
-}
 require("smart-enter")
 require("yatline"):setup({
   --theme = my_theme,
@@ -21,7 +18,7 @@ require("yatline"):setup({
     },
   },
   style_b = {
-    fg = "cyan",
+    fg = "grey",
     bg_mode = {
       normal = nil,
       select = nil,
@@ -29,7 +26,7 @@ require("yatline"):setup({
     }
   },
   style_c = {
-    fg = "grey",
+    fg = "cyan",
     bg_mode = {
       normal = nil,
       select = nil,
@@ -61,16 +58,15 @@ require("yatline"):setup({
   display_header_line = true,
   display_status_line = true,
 
-  component_positions = { "header", "tab", "status" },
-
   header_line = {
     left = {
       section_a = {
+        {type = "coloreds", custom = true, name = {{"user@nyxos", "green"}, {":", "white"}}},
       },
       section_b = {
-        {type = "string", custom = false, name = "hovered_path"},
       },
       section_c = {
+        {type = "string", custom = false, name = "hovered_path"},
       }
     },
     right = {
@@ -91,19 +87,20 @@ require("yatline"):setup({
         {type = "coloreds", custom = false, name = "permissions"},
       },
       section_b = {
-        {type = "string", custom = false, name = "hovered_file_extension", params = {true}},
+        {type = "string", custom = false, name = "hovered_ownership"},
+        {type = "string", custom = false, name = "hovered_size"},
       },
       section_c = {
-        {type = "string", custom = false, name = "hovered_size"},
+        {type = "string", custom = false, name = "hovered_file_extension"},
       }
     },
     right = {
       section_a = {
       },
       section_b = {
+        {type = "string", custom = false, name = "cursor_position"},
       },
       section_c = {
-        {type = "string", custom = false, name = "cursor_position"},
       }
     }
   },
