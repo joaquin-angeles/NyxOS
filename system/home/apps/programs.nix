@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
-{
+  {
   # fzf
   programs.fzf = {
     enable = true;
@@ -32,9 +32,31 @@
     plugins = [ pkgs.rofi-emoji ];
   };
 
-  # zoxide
-  programs.zoxide = {
+  # Yazi file manager
+  programs.yazi = {
     enable = true;
     enableZshIntegration = true;
-  };
-}
+    theme = {
+      filetype = {
+        rules = [
+          { mime = "inode/directory"; fg = "blue"; bold = true; }
+          { name = "*"; is = "orphan"; fg = "red"; }
+          { name = "*"; is = "link"; fg = "cyan"; }
+          { name = "*/"; is = "orphan"; fg = "red"; }
+          { name = "*/"; is = "link"; fg = "cyan"; }
+        ];
+      };
+      initLua = ../../../yazi/init.lua;
+      plugins = {
+        chmod with pkgs; = yaziPlugins.chmod;
+        full-border with pkgs; = yaziPlugins.full-border;
+        smart-enter with pkgs; = yaziPlugins.smart-enter;
+      };
+    };
+
+    # zoxide
+    programs.zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+  }

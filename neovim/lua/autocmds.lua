@@ -13,8 +13,3 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     vim.o.relativenumber = true
   end,
 })
-
--- Transparent background
-vim.cmd [[
-  hi Normal guibg=NONE ctermbg=NONE
-]]
