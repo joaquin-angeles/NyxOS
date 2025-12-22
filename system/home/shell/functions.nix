@@ -14,8 +14,7 @@
       echo ""
     fi
 
-    # Prompt
-    source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme # Prompt
 
     # P10K configuration
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

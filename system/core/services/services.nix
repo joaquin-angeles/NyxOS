@@ -7,15 +7,6 @@
     polkit_gnome
   ];
 
-  # Connectivity configurations
-  hardware.bluetooth.enable = true;
-  services.libinput.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
-  };
-
   # Display Manager
   services.displayManager.ly.enable = true;
 

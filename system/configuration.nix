@@ -3,23 +3,12 @@
 {
   # Modules
   imports = [
-    ./core/apps/development-tools.nix
-    ./core/apps/fonts.nix
-    ./core/apps/packages.nix
-    ./core/apps/programs.nix
-    ./core/hardware/laptop.nix
-    ./core/hardware/nvidia.nix
+    ./core/apps.nix
+    ./core/hardware.nix
     ./core/services/networking.nix
     ./core/services/services.nix
     /etc/nixos/hardware-configuration.nix
   ];
-
-  # Boot options
-  boot.kernelModules = [ "zram" ];
-  boot.loader = {
-    efi.canTouchEfiVariables = true;
-    systemd-boot.enable = true;
-  };
 
   # Enable XDG portals
   xdg.portal = {
@@ -36,12 +25,6 @@
     };
   };
   environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
-
-  # Hardware settings
-  hardware.graphics = {
-    enable = true; 
-    enable32Bit = true;
-  };
 
   # Nix package manager
   nix.optimise.automatic = true;

@@ -26,17 +26,9 @@
     # Configurations
     ./home/dotfiles.nix
     ./home/environment.nix # Environment variables
-    ./home/apps/fonts.nix # Fonts
 
-    # Packages
-    ./home/apps/packages.nix # User packages
-    ./home/apps/programs.nix # Program configuration
-    ./home/apps/scripts.nix # Shell scripts
+    ./home/apps.nix # Packages
 
-    # Zsh
-    ./home/shell/base.nix # Enabling shell and/or shell plugins
-    ./home/shell/aliases.nix # Shell aliases
-    ./home/shell/functions.nix # Pre-initialization
-    # ./home/shell/keybinds.nix
+    ./home/shell.nix # Shell configuration (zsh)
   ];
 }
