@@ -2,13 +2,12 @@
 
 {
   programs.zsh.shellAliases = {
-    bat = "bat --color=always --theme=base16";
-    cat = "bat --color=always --theme=base16 --style=plain";
+    cat = "bat";
     grep = "rg";
-    ll = "eza  -lh --icons";
-    lla = "eza -lha --icons";
-    ls = "eza --icons";
-    lsa = "eza -a --icons";
+    ll = "eza  -lh";
+    lla = "eza -lha";
+    ls = "eza";
+    lsa = "eza -a";
     vim = "nvim";
     yazi = "yz";
     zlj = "zellij";

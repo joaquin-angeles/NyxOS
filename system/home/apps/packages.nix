@@ -4,11 +4,9 @@
   # User packages
   home.packages = with pkgs; [
     alacritty
-    bat
     btop
+    celluloid
     cliphist
-    eza
-    fd
     file-roller
     hyprlock
     hyprpicker
@@ -21,7 +19,6 @@
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
     mako
-    mpv
     ripgrep
     stow
     unstable.hyprshot

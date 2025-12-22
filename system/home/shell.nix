@@ -4,7 +4,6 @@
   # Shell integrations
   imports = [
     ./shell/aliases.nix
-    ./shell/binds.nix
     ./shell/functions.nix
     ./shell/integrations/programs.nix
     ./shell/integrations/yazi.nix
