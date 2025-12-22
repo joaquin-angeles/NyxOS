@@ -32,7 +32,7 @@
     {
       "type": "packages",
       "key": "pkgs  ",
-      "format": "{9} (system), {10} (user)"
+      "format": "{9} (core), {10} (home)"
     },
     {
       "type": "shell",

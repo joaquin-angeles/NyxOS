@@ -73,7 +73,14 @@
       chmod = pkgs.yaziPlugins.chmod;
       full-border = pkgs.yaziPlugins.full-border;
       smart-enter = pkgs.yaziPlugins.smart-enter;
+      yatline = pkgs.yaziPlugins.yatline;
     };
+    extraPackages = with pkgs; [
+      ffmpegthumbnailer
+      ueberzugpp
+      file
+      poppler
+    ];
   };
 
   # zoxide

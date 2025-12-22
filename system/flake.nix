@@ -22,6 +22,7 @@
   outputs = inputs@{ self, nixpkgs, unstable, home-manager, zen-browser, ... }: {
     # Imported configurations
     nixosConfigurations.nyxos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix # System configuration
@@ -40,16 +41,17 @@
         }
 
         # Package overlays
-        ({ pkgs, ... }: {
+        {
           nixpkgs.overlays = [
             (final: prev: {
-              # Unstable (rolling) package integration
-              unstable = import unstable {
-                system = pkgs.stdenv.hostPlatform.system;
+              # Overlay the unstable input
+              unstable = import inputs.unstable {
+                inherit (prev.stdenv.hostPlatform) system;
+                config = prev.config;
               };
             })
           ];
-        })
+        }
       ];
     };
   };
