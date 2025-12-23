@@ -3,7 +3,7 @@
 opacity = 0.8
 
 # Window padding
-padding = { x = 5, y = 5 }
+padding = { x = 10, y = 10 }
 
 # Centering
 dynamic_padding = true
