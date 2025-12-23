@@ -61,7 +61,7 @@ require("yatline"):setup({
   header_line = {
     left = {
       section_a = {
-        {type = "coloreds", custom = true, name = {{"user@nyxos", "green"}, {":", "white"}}},
+        {type = "coloreds", custom = true, name = {{"user@nixos-btw", "green"}, {":", "white"}}},
       },
       section_b = {
       },

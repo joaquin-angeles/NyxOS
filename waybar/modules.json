@@ -87,8 +87,7 @@
   "clock": {
     "format": "{:%H:%M}",
     "tooltip": true,
-    "tooltip-format": "{:%b %d, %Y on a %A} (Click me)",
-    "on-click": "cheatsheet.sh | rofi -dmenu -p 'keybinds' -theme-str 'window { width: 650px; }'",
+    "tooltip-format": "{:%b %d, %Y on a %A}",
     "interval": 1,
   },
 

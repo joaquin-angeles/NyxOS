@@ -1,5 +1,5 @@
 {
-  description = "NyxOS";
+  description = "Joaquin's Gruvy Nix";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Stable nixpkgs
@@ -21,7 +21,7 @@
   # Main integrations
   outputs = inputs@{ self, nixpkgs, unstable, home-manager, zen-browser, ... }: {
     # Imported configurations
-    nixosConfigurations.nyxos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [

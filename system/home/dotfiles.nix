@@ -5,7 +5,7 @@
     ".config/alacritty".source = ../../alacritty;
     ".config/fastfetch".source = ../../fastfetch;
     ".config/hypr".source = ../../hyprland;
-    ".config/Kvantum".source = ../../themes/Kvantum;
+    ".config/Kvantum".source = ../../Qt;
     ".config/mako".source = ../../mako;
     ".config/nvim".source = ../../neovim;
     ".config/rofi".source = ../../rofi;

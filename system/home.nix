@@ -15,6 +15,14 @@
     size = 24;
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.gruvbox-gtk-theme;
+      name = "Gruvbox-Dark";
+    };
+  };
+
   # Qt theming
   qt = {
     enable = true;
