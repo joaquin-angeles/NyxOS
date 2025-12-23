@@ -3,7 +3,7 @@
 window#waybar {
   font: 13.5pt "JetBrainsMono Nerd Font Propo";
   background-color: @bg;
-  border-bottom: 1px solid darker(#494949);
+  /* border-bottom: 1px solid darker(#494949); */
   color: @fg;
 }
 
@@ -16,21 +16,22 @@ window#waybar {
 }
 
 #clock {
+  /*
   background-color: #2a2a2a;
   margin-top: 2pt;
   margin-bottom: 2pt;
   border: 1px solid #404040;
   border-radius: 8px;
+  */
   color: @yellow;
-  margin-left: 4pt;
-  padding-left: 8pt;
-  padding-right: 6pt;
+  padding-left: 6pt;
+  padding-right: 2pt;
 }
 
 /* Custom menu section */
 #custom-menu {
   margin-left: 5pt;
-  margin-right: 5pt;
+  margin-right: 2pt;
   font-size: 15pt;
   color: @blue;
 }
@@ -71,10 +72,8 @@ window#waybar {
 
 /* System tray */
 #tray {
-  margin-left: 4pt;
   padding-left: 5pt;
-  padding-right: 5pt;
-  background-color: lighter(@bg);
+  padding-right: 6pt;
 }
 
 /* Window title or active window module */

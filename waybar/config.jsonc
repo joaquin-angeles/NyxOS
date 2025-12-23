@@ -5,12 +5,13 @@
   "height": 24,
   "spacing": 0,
   "modules-left": [
-    "clock",
+    "custom/menu",
     "hyprland/workspaces",
   ],
   "modules-center": [ "hyprland/window", ],
   "modules-right": [
     "group/sys-info",
+    "clock",
     "custom/power",
     "tray",
   ],
