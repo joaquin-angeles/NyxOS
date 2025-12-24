@@ -5,8 +5,13 @@
   imports = [
     ./shell/aliases.nix
     ./shell/functions.nix
-    ./shell/integrations/programs.nix
+    ./shell/integrations/eza.nix
+    ./shell/integrations/fd.nix
+    ./shell/integrations/fzf.nix
+    ./shell/integrations/nom.nix
+    ./shell/integrations/ripgrep.nix
     ./shell/integrations/yazi.nix
+    ./shell/integrations/zoxide.nix
   ];
 
   # Base zsh configuration

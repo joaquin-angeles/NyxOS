@@ -34,17 +34,5 @@
         fi
       '
     }
-
-    # Better Yazi
-    function yz() {
-      local tmp cwd
-      tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-      yazi "$@" --cwd-file="$tmp"
-      IFS= read -r cwd < "$tmp"
-      if [[ -n "$cwd" && "$cwd" != "$PWD" ]]; then
-        builtin cd -- "$cwd" && eza
-      fi
-      rm -f -- "$tmp"
-    }
   '';
 }

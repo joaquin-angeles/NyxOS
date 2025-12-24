@@ -2,14 +2,15 @@
 
 {
   programs.zsh.shellAliases = {
-    cat = "bat";
+    cat = "bat --style=plain";
     grep = "rg";
     ll = "eza  -lh";
     lla = "eza -lha";
     ls = "eza";
     lsa = "eza -a";
     vim = "nvim";
-    yazi = "yz";
+    yazi = "yy";
+    yz = "yy";
     zlj = "zellij";
   };
 }
