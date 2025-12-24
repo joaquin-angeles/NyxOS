@@ -20,11 +20,7 @@
 
     services.power-profiles-daemon.enable = false; # Disable PPD
 
-    # Extra packages
-    environment.systemPackages = with pkgs; [
-        acpi
-        powertop
-    ];
+    environment.systemPackages = with pkgs; [ powertop ]; # Extra packages
 
     services.upower.enable = true; # Upower
 }
