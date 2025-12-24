@@ -31,6 +31,5 @@
         waybar
         wbg
         zellij
-        zsh-powerlevel10k
     ];
 }
