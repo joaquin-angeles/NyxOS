@@ -14,3 +14,9 @@ vim.o.guicursor = "i:block-blinkon500-blinkoff500" -- Cursor configuration
 
 -- Transparent background
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+
+-- Indent config
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.expandtab = true
