@@ -23,13 +23,8 @@
             print -Pn "\e]0;%n@%m: %~\a"
         }
 
-        # Better CD
-        cd() {
-            z "$@" && eza --icons always --group-directories-first --git
-        }
-
         # Better FZF (faster preview)
-        fzf() {
+        function ff() {
           command fzf --preview '
             if [ -d {} ]; then
                 eza --icons always --group-directories-first --git --color=always {} || ls -lh {}
