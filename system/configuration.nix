@@ -10,6 +10,9 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
+  # Display Manager
+  services.displayManager.ly.enable = true;
+
   # Enable XDG portals
   xdg.portal = {
     enable = true;
