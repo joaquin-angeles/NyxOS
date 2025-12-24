@@ -1,18 +1,16 @@
 { config, ... }:
 
 {
-    home.file = { 
-        ".config/alacritty".source = ../../alacritty;
-        ".config/fastfetch".source = ../../fastfetch;
-        ".config/hypr".source = ../../hyprland;
-        ".config/Kvantum".source = ../../Qt;
-        ".config/mako".source = ../../mako;
-        ".config/nvim".source = ../../neovim;
-        ".config/rofi".source = ../../rofi;
-        ".config/swayosd".source = ../../swayosd;
-        ".config/waybar".source = ../../waybar;
-        ".config/zellij".source = ../../zellij;
-        ".local/share/icons/Papirus".source = ../../icons/Papirus;
-        ".zprofile".source = ../../zsh/.zprofile;
+    xdg.configFile = {
+        "alacritty".source = ../../alacritty;
+        "fastfetch".source = ../../fastfetch;
+        "hypr".source = ../../hyprland;
+        "Kvantum".source = ../../Qt;
+        "mako".source = ../../mako;
+        "nvim".source = ../../neovim;
+        "rofi".source = ../../rofi;
+        "swayosd".source = ../../swayosd;
+        "waybar".source = ../../waybar;
+        "zellij".source = ../../zellij;
     };
 }
