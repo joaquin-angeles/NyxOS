@@ -1,18 +1,18 @@
 {
-  "include": "./modules.json",
-  "layer": "top",
-  "position": "top",
-  "height": 24,
-  "spacing": 0,
-  "modules-left": [
-    "custom/menu",
-    "hyprland/workspaces",
-  ],
-  "modules-center": [ "hyprland/window", ],
-  "modules-right": [
-    "group/sys-info",
-    "clock",
-    "custom/power",
-    "tray",
-  ],
+    "include": "./modules.json",
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 0,
+    "modules-left": [
+        "custom/menu",
+        "hyprland/workspaces",
+    ],
+    "modules-center": [ "hyprland/window", ],
+    "modules-right": [
+        "group/sys-info",
+        "clock",
+        "custom/power",
+        "tray",
+    ],
 }

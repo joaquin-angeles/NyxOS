@@ -1,143 +1,143 @@
 {
-  "hyprland/window": {
-    "max-length": 64,
-    "format": "{}"
-  },
-
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "",
-      "default": "",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10"
+    "hyprland/window": {
+        "max-length": 64,
+        "format": "{}"
     },
-    "disable-scroll": true,
-    "all-outputs": true,
-    "active-only": false,
-    "on-click": "activate",
-    "persistent-workspaces": {
-      "*": 6
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        },
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 6
+        }
+    },
+
+    "network": {
+        "interface": "wlan0",
+        "format": "{icon}",
+        "format-icons": [
+            "󰤟", "󰤢", "󰤥", "󰤨" 
+        ],
+        "format-disconnected": "󰤭",
+        "format-ethernet": "󰈀",
+        "tooltip-format": "{essid} ({signalStrength}%)",
+        "on-click": "alacritty --title=iwctl -e impala"
+    },
+
+    "bluetooth": {
+        "format": "{icon}",
+        "format-icons": [ "󰂲", "󰂯" ],
+        "format-connected": "󰂯",
+        "format-disconnected": "󰂲",
+        "format-disabled": "󰂲",
+        "tooltip-format": "Active",
+        "tooltip-format-disabled": "Inactive",
+        "tooltip-format-connected": "{device_alias} ({device_battery_percentage}%)",
+        "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
+        "on-click": "blueman-manager"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": [
+                "󰝟",
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "on-click": "alacritty --title=Wiremix -e wiremix",
+        "tooltip-format": "Playing at {volume}%",
+    },
+
+    "battery": {
+        "format": "{icon}",
+        "format-icons": [
+            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+        ],
+        "format-full": "󱈑",
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
+        "tooltip": true,
+        "tooltip-format": "Discharging ({capacity}%)",
+        "tooltip-format-charging": "Charging ({capacity}%)",
+        "tooltip-format-full": "Full (100%)",
+        "interval": 10,
+        "states": {
+            "good": 80,
+            "low": 30,
+            "critical": 19,
+        },
+    },
+
+    "custom/clipboard": {
+        "format": "",
+        "on-click": "cliphist list | rofi -dmenu -p 'Clipboard history:' | cliphist decode | wl-copy",
+        "tooltip": true,
+        "tooltip-format": "Clipboard history"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{:%b %d, %Y on a %A}",
+        "interval": 1,
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10,
+    },
+
+    "group/sys-info": {
+        "orientation": "horizontal",
+        "modules": [
+            "network",
+            "pulseaudio",
+            "battery"
+        ]
+    },
+
+    "custom/expand-icon": {
+        "format": "…",
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": true,
+        "tooltip-format": "Power menu",
+        "on-click": "power-menu"
+    },
+
+    "custom/menu": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "drun",
+        "on-click": "rofi -show drun"
+    },
+
+    "backlight": {
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+        "interval": 1,
+        "on-click": "hyprsunset -t 4000",
+        "on-scroll-up": "brightnessctl s +5%",
+        "on-scroll-down": "brightnessctl s 5%-",
+        "tooltip": true,
+        "tooltip-format": "Current brightness: {percent}%"
     }
-  },
-
-  "network": {
-    "interface": "wlan0",
-    "format": "{icon}",
-    "format-icons": [
-      "󰤟", "󰤢", "󰤥", "󰤨" 
-    ],
-    "format-disconnected": "󰤭",
-    "format-ethernet": "󰈀",
-    "tooltip-format": "{essid} ({signalStrength}%)",
-    "on-click": "alacritty --title=iwctl -e impala"
-  },
-
-  "bluetooth": {
-    "format": "{icon}",
-    "format-icons": [ "󰂲", "󰂯" ],
-    "format-connected": "󰂯",
-    "format-disconnected": "󰂲",
-    "format-disabled": "󰂲",
-    "tooltip-format": "Active",
-    "tooltip-format-disabled": "Inactive",
-    "tooltip-format-connected": "{device_alias} ({device_battery_percentage}%)",
-    "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
-    "on-click": "blueman-manager"
-  },
-
-  "pulseaudio": {
-    "format": "{icon}",
-    "format-muted": "󰖁",
-    "format-icons": {
-      "default": [
-        "󰝟",
-        "󰕿",
-        "󰖀",
-        "󰕾"
-      ]
-    },
-    "on-click": "alacritty --title=Wiremix -e wiremix",
-    "tooltip-format": "Playing at {volume}%",
-  },
-
-  "battery": {
-    "format": "{icon}",
-    "format-icons": [
-      "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
-    ],
-    "format-full": "󱈑",
-    "format-charging": "󰂄",
-    "format-warning": "󰂃",
-    "tooltip": true,
-    "tooltip-format": "Discharging ({capacity}%)",
-    "tooltip-format-charging": "Charging ({capacity}%)",
-    "tooltip-format-full": "Full (100%)",
-    "interval": 10,
-    "states": {
-      "good": 80,
-      "low": 30,
-      "critical": 19,
-    },
-  },
-
-  "custom/clipboard": {
-    "format": "",
-    "on-click": "cliphist list | rofi -dmenu -p 'Clipboard history:' | cliphist decode | wl-copy",
-    "tooltip": true,
-    "tooltip-format": "Clipboard history"
-  },
-
-  "clock": {
-    "format": "{:%H:%M}",
-    "tooltip": true,
-    "tooltip-format": "{:%b %d, %Y on a %A}",
-    "interval": 1,
-  },
-
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10,
-  },
-
-  "group/sys-info": {
-    "orientation": "horizontal",
-    "modules": [
-      "network",
-      "pulseaudio",
-      "battery"
-    ]
-  },
-
-  "custom/expand-icon": {
-    "format": "…",
-    "tooltip": false
-  },
-   
-  "custom/power": {
-    "format": "󰐥",
-    "tooltip": true,
-    "tooltip-format": "Power menu",
-    "on-click": "power-menu"
-  },
-   
-  "custom/menu": {
-    "format": "",
-    "tooltip": true,
-    "tooltip-format": "drun",
-    "on-click": "rofi -show drun"
-  },
-   
-  "backlight": {
-    "format": "{icon}",
-    "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-    "interval": 1,
-    "on-click": "hyprsunset -t 4000",
-    "on-scroll-up": "brightnessctl s +5%",
-    "on-scroll-down": "brightnessctl s 5%-",
-    "tooltip": true,
-    "tooltip-format": "Current brightness: {percent}%"
-  }
 }

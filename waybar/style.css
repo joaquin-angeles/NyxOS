@@ -1,119 +1,119 @@
 @import url("./colors.css");
 
 window#waybar {
-  font: 13.5pt "JetBrainsMono Nerd Font Propo";
-  background-color: @bg;
-  /* border-bottom: 1px solid darker(#494949); */
-  color: @fg;
+    font: 13.5pt "JetBrainsMono Nerd Font Propo";
+    background-color: @bg;
+    /* border-bottom: 1px solid darker(#494949); */
+    color: @fg;
 }
 
 #sys-info {
-  background-color: #2b2d2d;
-  margin-top: 2pt;
-  margin-bottom: 2pt;
-  border-radius: 8px;
+    background-color: #2b2d2d;
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+    border-radius: 8px;
 }
 
 #clock {
-  /*
-  background-color: #2b2d2d;
-  margin-top: 2pt;
-  margin-bottom: 2pt;
-  border: 1px solid #404040;
-  border-radius: 8px;
-  */
-  padding-left: 6pt;
-  padding-right: 2pt;
+    /*
+background-color: #2b2d2d;
+margin-top: 2pt;
+margin-bottom: 2pt;
+border: 1px solid #404040;
+border-radius: 8px;
+*/
+    padding-left: 6pt;
+    padding-right: 2pt;
 }
 
 /* Custom menu section */
 #custom-menu {
-  margin-left: 5pt;
-  margin-right: 2pt;
-  font-size: 15pt;
-  color: @blue;
+    margin-left: 5pt;
+    margin-right: 2pt;
+    font-size: 15pt;
+    color: @blue;
 }
 
 /* Power icon/module */
 #custom-power {
-  color: @red;
-  background-color: darker(#753431);
-  margin-top: 2pt;
-  margin-bottom: 2pt;
-  border-radius: 8px;
-  margin-right: 3pt;
-  margin-left: 5pt;
-  padding-left: 6pt;
-  padding-right: 6pt;
-  /* color: @red; */
+    color: @red;
+    background-color: darker(#753431);
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+    border-radius: 8px;
+    margin-right: 3pt;
+    margin-left: 5pt;
+    padding-left: 6pt;
+    padding-right: 6pt;
+    /* color: @red; */
 }
 
 /* Network module */
 #network {
-  color: @blue;
-  margin-right: 11pt;
-  padding-left: 6pt;
+    color: @blue;
+    margin-right: 11pt;
+    padding-left: 6pt;
 }
 
 /* PulseAudio module */
 #pulseaudio {
-  color: @magenta;
-  font-size: 15pt;
-  margin-right: 11.5pt;
+    color: @magenta;
+    font-size: 15pt;
+    margin-right: 11.5pt;
 }
 
 #battery {
-  color: @green;
-  padding-right: 7pt;
+    color: @green;
+    padding-right: 7pt;
 }
 
 #battery.low {
-  color: @yellow;
+    color: @yellow;
 }
 
 #battery.critical {
-  color: @red;
+    color: @red;
 }
 
 /* System tray */
 #tray {
-  padding-left: 5pt;
-  padding-right: 6pt;
+    padding-left: 5pt;
+    padding-right: 6pt;
 }
 
 /* Window title or active window module */
 #window {
-  /* color: #9F8F72; */
-  color: darker(@fg);
-  padding-left: 6pt;
-  padding-right: 6pt;
+    /* color: #9F8F72; */
+    color: darker(@fg);
+    padding-left: 6pt;
+    padding-right: 6pt;
 }
 
 #workspaces {
-  background-color: #2b2d2d;
-  margin-top: 2pt;
-  margin-bottom: 2pt;
-  margin-left: 5pt;
-  padding-left: 4pt;
-  padding-right: 4pt;
-  border-radius: 8px;
+    background-color: #2b2d2d;
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+    margin-left: 5pt;
+    padding-left: 4pt;
+    padding-right: 4pt;
+    border-radius: 8px;
 }
 
 /* Workspaces buttons */
 #workspaces button {
-  padding: 0 4px;
-  color: @fg;
+    padding: 0 4px;
+    color: @fg;
 }
 
 #workspaces button.empty {
-  color: #5F5644;
+    color: #5F5644;
 }
 
 #workspaces button.active {
-  color: @cyan;
+    color: @cyan;
 }
 
 #workspaces button:hover {
-  color: darker(@cyan);
-  background: transparent;
+    color: darker(@cyan);
+    background: transparent;
 }
