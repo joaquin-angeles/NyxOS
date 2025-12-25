@@ -12,7 +12,6 @@
         hyprlock
         hyprpicker
         hyprshot
-        impala
         imv
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         kdePackages.qt6ct
@@ -22,6 +21,8 @@
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
         mako
+        nmgui
+        pavucontrol
         ripgrep
         stow
         sunsetr
@@ -29,7 +30,6 @@
         unstable.neovim
         waybar
         wbg
-        wiremix
         zellij
     ];
 }
