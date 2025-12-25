@@ -4,7 +4,7 @@
     # Shell integrations
     imports = [
         ./shell/aliases.nix
-        ./shell/functions.nix
+        ./shell/extraConfig.nix
         ./shell/integrations/bat.nix
         ./shell/integrations/eza.nix
         ./shell/integrations/fd.nix
@@ -21,6 +21,7 @@
         enable = true; # Enable zsh for configuration
 
         # Plugins
+        completionInit = "autoload -Uz compinit && compinit -C";
         syntaxHighlighting.enable = true; # Colorize your shell
         autosuggestion.enable = true; # Autosuggestions
         enableCompletion = true; # Auto-completions

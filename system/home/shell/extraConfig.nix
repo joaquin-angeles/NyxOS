@@ -1,16 +1,18 @@
 { config, pkgs, ... }:
 
 {
+    programs.zsh.initExtraFirst = ''
+        # P10K instant prompt
+        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${USER}.zsh" ]]; then
+            source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${USER}.zsh"
+        fi
+    '';
+
     programs.zsh.initContent = ''
         # Fetch
         if command -v fastfetch >/dev/null 2>&1; then
             fastfetch
             echo ""
-        fi
-
-        # P10K instant prompt
-        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-            source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
         fi
 
         # P10K configuration
