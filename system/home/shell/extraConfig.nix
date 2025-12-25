@@ -14,7 +14,7 @@
             # Everything else
             ''
                 # P10K configuration
-                source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme # Prompt
+                source $HOME/.zsh/plugins/powerlevel10k/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
                 [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
                 # Cursor and title configuration

@@ -6,8 +6,10 @@
         ./services/flatpak.nix
         ./services/networking.nix
         ./services/nftables.nix
-        ./services/gvfs.nix
         ./services/polkit.nix
-        ./services/zerotier.nix
     ];
+    
+    services.dbus.enable = true; # DBus support
+    services.gvfs.enable = true; # Trash implementation on FS
+    services.zerotierone.enable = true; # Virtual network manager
 }

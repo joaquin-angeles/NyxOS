@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    powerManagement.powertop.enable = true; # Powertop
+    # powerManagement.powertop.enable = true; # Powertop
 
     # Auto CPU frequency
     services.auto-cpufreq = {
@@ -20,7 +20,10 @@
 
     services.power-profiles-daemon.enable = false; # Disable PPD
 
-    environment.systemPackages = with pkgs; [ powertop ]; # Extra packages
+    # Extra packages
+    environment.systemPackages = with pkgs; [
+        # powertop
+    ]; 
 
     services.upower.enable = true; # Upower
 }
