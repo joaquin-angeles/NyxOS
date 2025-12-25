@@ -15,24 +15,31 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
+# FZF
+function ff() {
+    command fzf --preview '
+        if [ -d {} ]; then
+            command -v eza >/dev/null && eza --icons always --group-directories-first --git --color=always {} || ls -lh {}
+        else
+            command -v bat >/dev/null && bat --color=always {} || cat {}
+        fi
+    '
+}
+
+# Yazi
+function yy() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(<"$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
 # Set window titles
 precmd() {
     print -Pn "\e]0;%n@%m:%~\a"
 }
-
-# Lf file manager
-lfcd () {
-    tmp="$(mktemp)"
-    $HOME/.config/lf/lfrun -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            cd "$dir"
-        fi
-    fi
-}
-alias lf=lfcd
 
 # Compinit
 ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
@@ -44,40 +51,16 @@ else
 fi
 
 # Aliases
-alias bat='bat --color=always --theme=base16 --style=plain'
-alias c=clear
-alias flatpak='flatpak --user'
-alias fzf="fzf --preview '
-if [ -d {} ]; then
-    eza -l --color=always {} || ls -la {}
-else
-    bat --color=always --theme=base16 --style=plain {}
-fi
-'"
-alias grep=rg
-alias k=kill
-alias lsa='eza -a'
-alias ll='eza -l'
-alias lla='eza -la'
-alias ls=eza
-alias nv-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
-alias paru='paru --skipreview'
-alias paruf=~/.bin/parufzf
-alias pk=pkill
-alias vim=nvim
-alias v=nvim
-alias nix-shell='nix-shell --run $SHELL'
-cd() {
-    z "$@" && eza
-}
-nix() {
-    if [[ $1 == "develop" ]]; then
-        shift
-        command nix develop -c $SHELL "$@"
-    else
-        command nix "$@"
-    fi
-}
+alias -- bat = 'bat --color=always --theme=gruvbox-dark --style=numbers'
+alias -- cat = 'bat --color=always --theme=gruvbox-dark --style=plain'
+alias -- cd = z
+alias -- fzf = ff
+alias -- grep = rg
+alias -- ll = 'eza -lh'
+alias -- lla = 'eza -lha'
+alias -- ls=eza
+alias -- lsa= 'eza -a'
+alias -- vim=nvim
 
 # History
 HISTSIZE=5000

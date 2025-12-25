@@ -3,6 +3,7 @@
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Stable nixpkgs
+        nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # Flatpaks
         unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Rolling nixpkgs
 
         # Home manager
@@ -19,7 +20,7 @@
     };
 
     # Main integrations
-    outputs = inputs@{ self, nixpkgs, unstable, home-manager, zen-browser, ... }: {
+    outputs = inputs@{ self, nixpkgs, nix-flatpak, unstable, home-manager, zen-browser, ... }: {
         # Imported configurations
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
@@ -37,6 +38,7 @@
                         useGlobalPkgs = true; # Merge into packages
                         useUserPackages = true; # Utilize per-user package installation
                         extraSpecialArgs = { inherit inputs; }; # Accept inputs 
+                        sharedModules = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
                     };
                 }
 
