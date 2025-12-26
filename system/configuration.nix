@@ -9,8 +9,11 @@
         /etc/nixos/hardware-configuration.nix
     ];
 
+    # Kernel
+    boot.kernelPackages = pkgs.linuxPackages_lts;
+
     # Display Manager
-    services.displayManager.ly.enable = true;
+    # services.displayManager.ly.enable = true;
 
     # Enable XDG portals
     xdg.portal = {
