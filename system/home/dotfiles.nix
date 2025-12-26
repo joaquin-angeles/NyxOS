@@ -13,4 +13,6 @@
         "waybar".source = ../../waybar;
         "zellij".source = ../../zellij;
     };
+
+    home.file.".p10k.zsh".source = ../../zsh/.p10k.zsh;
 }
