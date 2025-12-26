@@ -7,13 +7,6 @@
         ./hardware/nvidia.nix # Proprietary Nvidia drivers
     ];
 
-    # Boot options
-    boot.kernelModules = [ "zram" ];
-    boot.loader = {
-        efi.canTouchEfiVariables = true;
-        systemd-boot.enable = true;
-    };
-
     # Audio server configuration
     security.rtkit.enable = true;
     services.pipewire = {

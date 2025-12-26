@@ -9,11 +9,15 @@
         /etc/nixos/hardware-configuration.nix
     ];
 
-    # Kernel
-    boot.kernelPackages = pkgs.linuxPackages_lts;
+    # Boot options
+    boot.kernelModules = [ "zram" ];
+    boot.loader = {
+        efi.canTouchEfiVariables = true;
+        systemd-boot.enable = true;
+    };
 
     # Display Manager
-    # services.displayManager.ly.enable = true;
+    services.displayManager.ly.enable = true;
 
     # Enable XDG portals
     xdg.portal = {
