@@ -3,8 +3,6 @@
 {
     # User packages
     home.packages = with pkgs; [
-        alacritty
-        btop
         celluloid
         cliphist
         file-roller
