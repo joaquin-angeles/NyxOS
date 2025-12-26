@@ -35,26 +35,6 @@
                 title_format = "user@nixos-btw: {cwd}";
                 show_symlink = true;
             };
-            opener = {
-                edit = [
-                    { run = ''nvim "$@"''; block = true; desc = "Open in Neovim"; }
-                ];
-                play = [
-                    { run = ''mpv "$@"''; orphan = true; desc = "Play Video"; }
-                ];
-                view = [
-                    { run = ''imv "$@"''; orphan = true; desc = "View Image"; }
-                ];
-            };
-            open = {
-                rules = [
-                    { name = "*.mkv"; use = "play"; }
-                    { name = "*.mp4"; use = "play"; }
-                    { name = "*.png"; use = "view"; }
-                    { name = "*.jpg"; use = "view"; }
-                    { name = "*.jpeg"; use = "view"; }
-                ];
-            };
         };
         initLua = ../../../../yazi/init.lua;
         plugins = {
