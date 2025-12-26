@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 
 {
-    # Shell integrations
     imports = [
         ./shell/aliases.nix
-        ./shell/extraConfig.nix
+        ./shell/extraConfig.nix # Functions
+
+        # Shell integrations
         ./shell/integrations/bat.nix
         ./shell/integrations/eza.nix
         ./shell/integrations/fd.nix

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
     # User packages
@@ -10,7 +10,6 @@
         hyprpicker
         hyprshot
         imv
-        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         kdePackages.qt6ct
         kdePackages.qtstyleplugin-kvantum
         lazygit

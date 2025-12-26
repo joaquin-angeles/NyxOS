@@ -6,6 +6,7 @@
 
         # Installed flatpaks
         packages = [
+            "app.zen_browser.zen" # Default browser
             "com.github.tchx84.Flatseal" # Flatpak settings
             "com.obsproject.Studio" # Screen recording software
             "com.vysp3r.ProtonPlus" # Games compat tool

@@ -11,16 +11,10 @@
             url = "github:nix-community/home-manager/release-25.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        # Zen Browser
-        zen-browser = {
-            url = "github:youwen5/zen-browser-flake";
-            inputs.nixpkgs.follows = "unstable";
-        };
     };
 
     # Main integrations
-    outputs = inputs@{ self, nixpkgs, nix-flatpak, unstable, home-manager, zen-browser, ... }: {
+    outputs = inputs@{ self, nixpkgs, nix-flatpak, unstable, home-manager, ... }: {
         # Imported configurations
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
