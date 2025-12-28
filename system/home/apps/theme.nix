@@ -50,8 +50,11 @@
         };
     };
 
-    xdg.configFile."gtk-4.0/gtk.css".force = true;
+    # Overwritten config files
     xdg.configFile."gtk-4.0/settings.ini".force = true;
+    xdg.configFile."gtk-4.0/assets".source = "${pkgs.gruvbox-gtk-theme}/share/themes/Gruvbox-Dark/gtk-4.0/assets";
+    xdg.configFile."gtk-4.0/gtk.css".source = "${pkgs.gruvbox-gtk-theme}/share/themes/Gruvbox-Dark/gtk-4.0/gtk.css";
+    xdg.configFile."gtk-4.0/gtk-dark.css".source = "${pkgs.gruvbox-gtk-theme}/share/themes/Gruvbox-Dark/gtk-4.0/gtk-dark.css";
 
     # Flatpak theming
     home.activation.flatpakFontInit = config.lib.dag.entryAfter ["writeBoundary"] ''
@@ -62,7 +65,6 @@
 
     home.activation.flatpakGtkTheme = config.lib.dag.entryAfter ["writeBoundary"] ''
         $DRY_RUN_CMD mkdir -p $HOME/.local/share/themes
-        $DRY_RUN_CMD ln -sfn ${pkgs.adw-gtk3}/share/themes/* $HOME/.local/share/themes/
         $DRY_RUN_CMD ln -sfn ${pkgs.gruvbox-gtk-theme}/share/themes/* $HOME/.local/share/themes/
     '';
 }

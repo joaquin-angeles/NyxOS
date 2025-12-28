@@ -17,7 +17,7 @@
 
         # Apps
         ./home/apps.nix # Packages
-        ./home/apps/theming.nix # Theming
+        ./home/apps/themes.nix # Theming
 
         ./home/shell.nix # Shell configuration (zsh)
     ];

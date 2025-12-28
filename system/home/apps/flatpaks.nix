@@ -7,13 +7,13 @@
         # Installed flatpaks
         packages = [
             "app.zen_browser.zen" # Default browser
-            "com.github.tchx84.Flatseal" # Permissions manager
+            "com.github.tchx84.Flatseal"
             "com.obsproject.Studio" # Screen recording software
             # "com.usebottles.bottles" # Windows applications
             "com.vysp3r.ProtonPlus" # Games compat tool
             "com.spotify.Client" # Music streaming
             "dev.vencord.Vesktop" # Discord / Communication
-            # "net.lutris.Lutris"
+            "net.lutris.Lutris"
             "org.chromium.Chromium" # Progressive web apps
             "org.libreoffice.LibreOffice" # Office suite
             "org.gimp.GIMP" # Photo editing
@@ -42,12 +42,16 @@
 
             # File access
             Context.filesystems = [
+                "/nix/store:ro"
+                "/run/current-system/sw/:ro"
                 "~/.local/share/fonts:ro" # Access to fonts
                 "~/.local/share/themes:ro" # Access to themes
-                "/nix/store:ro"
-                "/run:ro"
+
+                # GTK Theming and icon access
                 "xdg-config/gtk-3.0:ro"
                 "xdg-config/gtk-4.0:ro"
+                "xdg-data/themes:ro"
+                "xdg-data/icons:ro"
             ];
         };
 
