@@ -19,8 +19,14 @@
             "org.gimp.GIMP" # Photo editing
         ];
 
-        update.onActivation = true; # Update every rebuild
-        update.auto.enable = true; # Scheduled updating
+        uninstallUnmanaged = false;
+        update.onActivation = false; # Update every rebuild
+
+        # Scheduled updating
+        update.auto = {
+            enable = true;
+            onCalendar = "weekly";
+        };
     };
 
     # Settings
