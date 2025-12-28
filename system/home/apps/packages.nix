@@ -17,13 +17,14 @@
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
         mako
-        nmgui
-        pavucontrol
+        nwg-look
         ripgrep
         stow
         sunsetr
         swayosd
+        unstable.impala
         unstable.neovim
+        unstable.wiremix
         waybar
         wbg
         zellij

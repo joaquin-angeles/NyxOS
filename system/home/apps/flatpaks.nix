@@ -9,8 +9,10 @@
             "app.zen_browser.zen" # Default browser
             "com.github.tchx84.Flatseal" # Flatpak settings
             "com.obsproject.Studio" # Screen recording software
+            # "com.usebottles.bottles" # Windows applications
             "com.vysp3r.ProtonPlus" # Games compat tool
             "com.spotify.Client" # Music streaming
+            "net.lutris.Lutris"
             "dev.vencord.Vesktop" # Discord / Communication
             "org.chromium.Chromium" # Progressive web apps
             "org.gimp.GIMP" # Photo editing

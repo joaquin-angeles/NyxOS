@@ -31,8 +31,8 @@
         ],
         "format-disconnected": "󰤭",
         "format-ethernet": "󰈀",
-        "tooltip-format": "{essid} ({signalStrength}%)",
-        "on-click": "nmgui"
+        "tooltip-format": "Connected to {essid}\nNetwork speed: {signalStrength}%",
+        "on-click": "alacritty --title='Network Manager' -e impala",
     },
 
     "bluetooth": {
@@ -59,8 +59,8 @@
                 "󰕾"
             ]
         },
-        "on-click": "pavucontrol",
-        "tooltip-format": "Playing at {volume}%",
+        "on-click": "alacritty --title='Volume Control' -e wiremix",
+        "tooltip-format": "Device: {desc}\nVolume: {volume}%",
     },
 
     "battery": {
@@ -72,9 +72,9 @@
         "format-charging": "󰂄",
         "format-warning": "󰂃",
         "tooltip": true,
-        "tooltip-format": "Discharging ({capacity}%)",
-        "tooltip-format-charging": "Charging ({capacity}%)",
-        "tooltip-format-full": "Full (100%)",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Discharging",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Charging",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Fully charged",
         "interval": 1,
         "states": {
             "good": 80,
@@ -120,7 +120,7 @@
         "format": "󰐥",
         "tooltip": true,
         "tooltip-format": "Power menu",
-        "on-click": "power-menu"
+        "on-click": "power-menu.sh"
     },
 
     "custom/menu": {
