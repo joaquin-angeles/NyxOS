@@ -6,6 +6,7 @@
         celluloid
         cliphist
         file-roller
+        hypridle
         hyprlock
         hyprpicker
         hyprshot
