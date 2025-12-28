@@ -15,8 +15,8 @@
             "net.lutris.Lutris"
             "dev.vencord.Vesktop" # Discord / Communication
             "org.chromium.Chromium" # Progressive web apps
+            "org.libreoffice.LibreOffice" # Office suite
             "org.gimp.GIMP" # Photo editing
-            "org.onlyoffice.desktopeditors" # Office suite
         ];
 
         update.onActivation = true; # Update every rebuild

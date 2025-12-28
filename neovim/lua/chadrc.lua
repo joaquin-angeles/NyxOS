@@ -26,6 +26,7 @@ M.nvdash = {
         { txt = "󰚥  Plugins", keys = "pl", cmd = "Lazy" }, -- Plugin manager (Lazy)
         { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" }, -- Keybind cheatsheet
         { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" }, -- Theme picker
+        { txt = "󰍃  Leave / Quit", keys = "qa", cmd = "qa" }, -- Make new file
 
         { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
 
