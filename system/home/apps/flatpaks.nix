@@ -65,11 +65,11 @@
         "com.github.tchx84.Flatseal" = {
             Environment = {
                 "GTK_THEME" = "adw-gtk3-dark:dark";
-                Context.filesystems = [
-                    "!xdg-config/gtk-3.0"
-                    "!xdg-config/gtk-4.0"
-                ];
             };
+            Context.filesystems = [
+                "!xdg-config/gtk-3.0"
+                "!xdg-config/gtk-4.0"
+            ];
         };
 
         # Vesktop config
