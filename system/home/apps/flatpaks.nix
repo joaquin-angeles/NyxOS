@@ -19,13 +19,15 @@
             "com.vysp3r.ProtonPlus" # Games compat tool
             "com.spotify.Client" # Music streaming
             "dev.vencord.Vesktop" # Discord / Communication
-            "net.lutris.Lutris"
+            "io.mrarm.mcpelauncher" # Minecraft
+            "net.lutris.Lutris" # Game launcher
             "org.chromium.Chromium" # Progressive web apps
             "org.libreoffice.LibreOffice" # Office suite
             "org.gimp.GIMP" # Photo editing
+            "org.vinegarhq.Sober" # Roblox
         ];
 
-        uninstallUnmanaged = false;
+        uninstallUnmanaged = true; # True declarative
         update.onActivation = false; # Update every rebuild
 
         # Scheduled updating
