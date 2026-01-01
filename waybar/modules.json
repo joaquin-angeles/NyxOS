@@ -9,7 +9,6 @@
         "format-icons": {
             "active": "",
             "default": "",
-            // "empty": "",
             "7": "7",
             "8": "8",
             "9": "9",
@@ -61,7 +60,7 @@
             ]
         },
         "on-click": "alacritty --title='Volume Control' -e wiremix",
-        "tooltip-format": "Volume:  {volume}%\nDevice: {desc}",
+        "tooltip-format": "Device: {desc}\nVolume: {volume}%",
     },
 
     "battery": {
@@ -92,9 +91,9 @@
     },
 
     "clock": {
-        "format": "{:%A %H:%M}",
+        "format": "{:%H:%M}",
         "tooltip": true,
-        "tooltip-format": "{:%b %d, %Y}",
+        "tooltip-format": "{:%b %d, %Y on a %A}",
         "interval": 1,
     },
 
