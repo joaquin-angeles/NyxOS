@@ -8,8 +8,8 @@
         "format": "{icon}",
         "format-icons": {
             "active": "",
-            "default": "",
-            "empty": "",
+            "default": "",
+            // "empty": "",
             "7": "7",
             "8": "8",
             "9": "9",
@@ -26,13 +26,13 @@
 
     "network": {
         "interface": "wlan0",
-        "format": "{icon} {essid}",
+        "format": "{icon}",
         "format-icons": [
             "󰤟", "󰤢", "󰤥", "󰤨" 
         ],
         "format-disconnected": "󰤭",
         "format-ethernet": "󰈀",
-        "tooltip-format": "Network speed: {signalStrength}%",
+        "tooltip-format": "Connected to {essid}\nNetwork speed: {signalStrength}%",
         "on-click": "alacritty --title='Network Manager' -e impala",
     },
 
@@ -50,7 +50,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}",
         "format-muted": "󰖁",
         "format-icons": {
             "default": [
@@ -61,21 +61,21 @@
             ]
         },
         "on-click": "alacritty --title='Volume Control' -e wiremix",
-        "tooltip-format": "Device: {desc}",
+        "tooltip-format": "Volume:  {volume}%\nDevice: {desc}",
     },
 
     "battery": {
-        "format": "{icon} {capacity}%",
+        "format": "{icon}",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
-        "format-full": "󱈑 {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-warning": "󰂃 {capacity}%",
+        "format-full": "󱈑",
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
         "tooltip": true,
-        "tooltip-format": "Status: Discharging",
-        "tooltip-format": "Status: Charging",
-        "tooltip-format": "Status: Fully charged",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Discharging",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Charging",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Fully charged",
         "interval": 1,
         "states": {
             "good": 80,
@@ -92,9 +92,9 @@
     },
 
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "{:%A %H:%M}",
         "tooltip": true,
-        "tooltip-format": "{:%b %d, %Y on a %A}",
+        "tooltip-format": "{:%b %d, %Y}",
         "interval": 1,
     },
 

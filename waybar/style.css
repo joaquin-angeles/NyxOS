@@ -9,6 +9,9 @@ window#waybar {
 }
 
 #sys-info {
+    background-color: @bright-bg;
+    margin-top: 2pt;
+    margin-bottom: 2pt;
     border-radius: 8px;
 }
 
@@ -20,7 +23,7 @@ margin-bottom: 2pt;
 border: 1px solid #404040;
 border-radius: 8px;
 */
-    padding-left: 6pt;
+    padding-left: 10pt;
     padding-right: 5.5pt;
 }
 
@@ -35,30 +38,34 @@ border-radius: 8px;
 /* Power icon/module */
 #custom-power {
     color: @red;
-    /* background-color: darker(#753431); */
-    font-size: 15pt;
+    background-color: darker(#753431);
+    margin-top: 2pt;
+    margin-bottom: 2pt;
     border-radius: 8px;
+    margin-right: 8pt;
+    margin-left: 5pt;
     padding-left: 6pt;
-    padding-right: 10pt;
+    padding-right: 6pt;
     /* color: @red; */
 }
 
 /* Network module */
 #network {
     color: @blue;
-    margin-right: 12pt;
+    margin-right: 11pt;
     padding-left: 6pt;
 }
 
 /* PulseAudio module */
 #pulseaudio {
     color: @magenta;
-    margin-right: 13pt;
+    font-size: 15pt;
+    margin-right: 11.5pt;
 }
 
 #battery {
     color: @green;
-    padding-right: 5pt;
+    padding-right: 7pt;
 }
 
 #battery.low {
@@ -95,12 +102,12 @@ border-radius: 8px;
 
 /* Workspaces buttons */
 #workspaces button {
-    padding: 0 5pt;
+    padding: 0 5px;
     color: @fg;
 }
 
 #workspaces button.empty {
-    color: #535657;
+    color: #4d5051;
 }
 
 #workspaces button.active {

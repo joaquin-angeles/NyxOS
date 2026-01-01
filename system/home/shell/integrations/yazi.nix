@@ -2,8 +2,12 @@
 
 {
     programs.yazi = {
+
+        # Prerequisites
         enable = true;
         enableZshIntegration = true;
+
+        # Filetype coloring
         theme = {
             filetype = {
                 rules = [
@@ -15,6 +19,8 @@
                 ];
             };
         };
+
+        # Keybindings
         keymap = {
             mgr.prepend_keymap = [
                 {
@@ -24,6 +30,8 @@
                 }
             ];
         };
+
+        # Settings
         settings = {
             log = {
                 enabled = false;
@@ -36,7 +44,10 @@
                 show_symlink = true;
             };
         };
-        initLua = ../../../../yazi/init.lua;
+
+        initLua = ../../../../yazi/init.lua; # Extra config
+
+        # Plugins
         plugins = {
             chmod = pkgs.yaziPlugins.chmod;
             full-border = pkgs.yaziPlugins.full-border;
@@ -44,6 +55,7 @@
             yatline = pkgs.yaziPlugins.yatline;
         };
 
+        # Previewers
         extraPackages = with pkgs; [
             ffmpegthumbnailer
             ueberzugpp
