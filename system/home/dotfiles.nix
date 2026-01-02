@@ -4,7 +4,7 @@
     xdg.configFile = {
         # "alacritty".source = ../../alacritty;
         "fastfetch".source = ../../fastfetch;
-        "hypr".source = ../../hyprland;
+        "hypr".source = ../../hypr;
         "Kvantum".source = ../../Qt;
         "mako".source = ../../mako;
         "nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/neovim";
